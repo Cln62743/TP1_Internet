@@ -1,0 +1,98 @@
+2018-08-30 12:36:13 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1034): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(988): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(212): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'tags', 'Tags')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('Tags')
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\BakeShell.php(273): Bake\Shell\Task\ModelTask->main('Tags')
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('tags', 0)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\BakeShell.php(274): Cake\Collection\Collection->each(Object(Closure))
+#16 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('tags')
+#17 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#18 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#19 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#20 {main}
+
+
+2018-08-30 12:37:23 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1034): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(988): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(212): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'users', 'Users')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('Users')
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('users')
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#16 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#17 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#18 {main}
+
+
+2018-08-30 12:37:46 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\ORM\Table.php(547): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('users')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2018-08-30 12:40:04 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1034): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(988): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(212): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'users', 'Users')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('Users')
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\BakeShell.php(273): Bake\Shell\Task\ModelTask->main('Users')
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('users', 0)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\BakeShell.php(274): Cake\Collection\Collection->each(Object(Closure))
+#16 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('users')
+#17 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#18 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#19 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#20 {main}
+
+

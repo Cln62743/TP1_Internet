@@ -1,0 +1,715 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2018-10-10 00:09+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "Name of the tournament"
+msgstr "Nombre del torneo"
+
+#: Controller/ClubsController.php:93;117
+msgid "The club has been saved."
+msgstr "El club ha sido salvado."
+
+#: Controller/ClubsController.php:97;121
+msgid "The club could not be saved. Please, try again."
+msgstr "El club no pudo ser salvado. Inténtalo de nuevo."
+
+#: Controller/ClubsController.php:138
+msgid "The club has been deleted."
+msgstr "El club ha sido eliminado."
+
+#: Controller/ClubsController.php:140
+msgid "The club could not be deleted. Please, try again."
+msgstr "El club no pudo ser eliminado. Inténtalo de nuevo."
+
+#: Controller/MatchesController.php:58;84
+msgid "The match has been saved."
+msgstr "El partido se ha guardado."
+
+#: Controller/MatchesController.php:62;88
+msgid "The match could not be saved. Please, try again."
+msgstr "El partido no pudo ser salvado. Inténtalo de nuevo."
+
+#: Controller/MatchesController.php:107
+msgid "The match has been deleted."
+msgstr "El partido ha sido eliminado."
+
+#: Controller/MatchesController.php:109
+msgid "The match could not be deleted. Please, try again."
+msgstr "El partido no pudo ser eliminado. Inténtalo de nuevo."
+
+#: Controller/PlayerTournamentParticipationsController.php:43;92;118
+msgid "The player registration as been saved."
+msgstr "El registro del jugador se ha guardado."
+
+#: Controller/PlayerTournamentParticipationsController.php:45;96;122
+msgid "The player registration could not be saved. Please, try again."
+msgstr "El registro del jugador no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/PlayerTournamentParticipationsController.php:141
+msgid "The player registration has been deleted."
+msgstr "El registro del jugador ha sido eliminado."
+
+#: Controller/PlayerTournamentParticipationsController.php:143
+msgid "The player registration could not be deleted. Please, try again."
+msgstr "El registro del jugador no pudo ser eliminado. Inténtalo de nuevo."
+
+#: Controller/PlayersController.php:54
+msgid "You do not have the rights to see this user."
+msgstr "No tienes los derechos para ver a este usuario."
+
+#: Controller/PlayersController.php:91;117
+msgid "The player has been saved."
+msgstr "El jugador ha sido salvado."
+
+#: Controller/PlayersController.php:95;121
+msgid "The player could not be saved. Please, try again."
+msgstr "El jugador no pudo ser salvado. Inténtalo de nuevo."
+
+#: Controller/PlayersController.php:140
+msgid "The player has been deleted."
+msgstr "El jugador ha sido eliminado."
+
+#: Controller/PlayersController.php:142
+msgid "The player could not be deleted. Please, try again."
+msgstr "El jugador no pudo ser eliminado. Inténtalo de nuevo."
+
+#: Controller/RefResultsController.php:55;79
+msgid "The result has been saved."
+msgstr "El resultado ha sido guardado."
+
+#: Controller/RefResultsController.php:59;83
+msgid "The result could not be saved. Please, try again."
+msgstr "El resultado no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/RefResultsController.php:100
+msgid "The result has been deleted."
+msgstr "El resultado ha sido eliminado."
+
+#: Controller/RefResultsController.php:102
+msgid "The result could not be deleted. Please, try again."
+msgstr "El resultado no pudo ser eliminado. Inténtalo de nuevo."
+
+#: Controller/TournamentsController.php:92
+msgid "the tournament has been saved."
+msgstr "El torneo se ha guardado."
+
+#: Controller/TournamentsController.php:96;120
+msgid "The tournament could not be saved. Please, try again."
+msgstr "El torneo no pudo ser salvado. Inténtalo de nuevo."
+
+#: Controller/TournamentsController.php:116
+msgid "The tournament as been saved."
+msgstr "El torneo se ha guardado."
+
+#: Controller/TournamentsController.php:139
+msgid "The tournament as been successfuly deleted."
+msgstr "El torneo ha sido eliminado exitosamente."
+
+#: Controller/TournamentsController.php:141
+msgid "The tournament could not be deleted. Please, try again."
+msgstr "El torneo no pudo ser eliminado. Inténtalo de nuevo."
+
+#: Controller/UsersController.php:89
+msgid "Invalid username or password, try again"
+msgstr "Nombre de usuario o contraseña no válidos, inténtalo de nuevo"
+
+#: Controller/UsersController.php:119;140;165
+msgid "The user has been saved."
+msgstr "El usuario ha sido guardado."
+
+#: Controller/UsersController.php:124;144;169
+msgid "The user could not be saved. Please, try again."
+msgstr "El usuario no pudo ser guardado. Inténtalo de nuevo."
+
+#: Controller/UsersController.php:186
+msgid "The user has been deleted."
+msgstr "El usuario ha sido eliminado."
+
+#: Controller/UsersController.php:188
+msgid "The user could not be deleted. Please, try again."
+msgstr "El usuario no pudo ser eliminado. Inténtalo de nuevo."
+
+#: Template/Clubs/add.ctp:11
+#: Template/Element/NavBar/navAdmin.ctp:13
+#: Template/Tournaments/add.ctp:11
+msgid "Add a tournament"
+msgstr "Añadir un torneo"
+
+#: Template/Clubs/add.ctp:16
+#: Template/Tournaments/add.ctp:18
+#: Template/Tournaments/edit.ctp:19
+msgid "Submit the tournament"
+msgstr "Presentar el torneo"
+
+#: Template/Clubs/edit.ctp:11
+#: Template/Clubs/index.ctp:29
+msgid "Edit the club"
+msgstr "Editar el club"
+
+#: Template/Clubs/edit.ctp:16
+msgid "Submit the club"
+msgstr "Presentar el club"
+
+#: Template/Clubs/index.ctp:10
+msgid "Clubs"
+msgstr "Clubs"
+
+#: Template/Clubs/index.ctp:17
+#: Template/Clubs/view.ctp:35
+#: Template/Element/NavBar/navAdmin.ctp:12
+#: Template/Layout/default.ctp:69
+#: Template/Matches/add.ctp:9
+#: Template/Matches/edit.ctp:9
+#: Template/Matches/index.ctp:9;30
+#: Template/Matches/view.ctp:9
+#: Template/PlayerTournamentParticipations/add.ctp:9
+#: Template/PlayerTournamentParticipations/edit.ctp:9
+#: Template/PlayerTournamentParticipations/index.ctp:9;27
+#: Template/PlayerTournamentParticipations/view.ctp:9
+#: Template/Players/index.ctp:20
+#: Template/RefResults/add.ctp:9
+#: Template/RefResults/edit.ctp:9
+#: Template/RefResults/index.ctp:9;22
+#: Template/RefResults/view.ctp:9
+#: Template/Tournaments/index.ctp:21
+#: Template/Tournaments/view.ctp:43
+#: Template/Users/index.ctp:16
+msgid "Actions"
+msgstr "Comportamiento"
+
+#: Template/Clubs/index.ctp:28
+msgid "View details of the club"
+msgstr "Ver detalles del club."
+
+#: Template/Clubs/index.ctp:30
+msgid "Delete the club"
+msgstr "Eliminar el club"
+
+#: Template/Clubs/index.ctp:30
+msgid "Are you sure you want to delete the club # {0}?"
+msgstr "Estás seguro de que quieres eliminar el club # {0}?"
+
+#: Template/Clubs/index.ctp:40
+#: Template/Matches/index.ctp:55
+#: Template/PlayerTournamentParticipations/index.ctp:49
+#: Template/Players/index.ctp:42
+#: Template/RefResults/index.ctp:43
+#: Template/Tournaments/index.ctp:43
+#: Template/Users/index.ctp:36
+msgid "first"
+msgstr "primera página"
+
+#: Template/Clubs/index.ctp:41
+#: Template/Matches/index.ctp:56
+#: Template/PlayerTournamentParticipations/index.ctp:50
+#: Template/Players/index.ctp:43
+#: Template/RefResults/index.ctp:44
+#: Template/Tournaments/index.ctp:44
+#: Template/Users/index.ctp:37
+msgid "previous"
+msgstr "pagina anterior"
+
+#: Template/Clubs/index.ctp:43
+#: Template/Matches/index.ctp:58
+#: Template/PlayerTournamentParticipations/index.ctp:52
+#: Template/Players/index.ctp:45
+#: Template/RefResults/index.ctp:46
+#: Template/Tournaments/index.ctp:46
+#: Template/Users/index.ctp:39
+msgid "next"
+msgstr "siguiente página"
+
+#: Template/Clubs/index.ctp:44
+#: Template/Matches/index.ctp:59
+#: Template/PlayerTournamentParticipations/index.ctp:53
+#: Template/Players/index.ctp:46
+#: Template/RefResults/index.ctp:47
+#: Template/Tournaments/index.ctp:47
+#: Template/Users/index.ctp:40
+msgid "last"
+msgstr "última página"
+
+#: Template/Clubs/index.ctp:46
+#: Template/Matches/index.ctp:61
+#: Template/PlayerTournamentParticipations/index.ctp:55
+#: Template/Players/index.ctp:48
+#: Template/RefResults/index.ctp:49
+#: Template/Tournaments/index.ctp:49
+#: Template/Users/index.ctp:42
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr "La página {{page}} de {{pages}}, mostrando {{current}} registros de {{count}} total"
+
+#: Template/Clubs/view.ctp:12
+#: Template/Users/edit.ctp:18
+msgid "Name of the club"
+msgstr "Nombre del club"
+
+#: Template/Clubs/view.ctp:16
+msgid "Number of members"
+msgstr "Número de miembros"
+
+#: Template/Clubs/view.ctp:20
+#: Template/Matches/view.ctp:48
+#: Template/PlayerTournamentParticipations/view.ctp:36
+#: Template/Players/view.ctp:34
+#: Template/RefResults/view.ctp:28
+#: Template/Tournaments/view.ctp:26
+#: Template/Users/view.ctp:31
+msgid "Created"
+msgstr "Creado"
+
+#: Template/Clubs/view.ctp:24
+#: Template/Matches/view.ctp:52
+#: Template/PlayerTournamentParticipations/view.ctp:40
+#: Template/Players/view.ctp:38
+#: Template/RefResults/view.ctp:32
+#: Template/Tournaments/view.ctp:30
+#: Template/Users/view.ctp:35
+msgid "Modified"
+msgstr "Modificado"
+
+#: Template/Clubs/view.ctp:29
+msgid "Members list"
+msgstr "Lista de miembros"
+
+#: Template/Clubs/view.ctp:33
+#: Template/Users/index.ctp:13
+#: Template/Users/view.ctp:11
+msgid "First name"
+msgstr "Primer nombre"
+
+#: Template/Clubs/view.ctp:34
+#: Template/Players/view.ctp:16
+#: Template/Users/index.ctp:14
+#: Template/Users/view.ctp:19
+msgid "Last name"
+msgstr "apellido"
+
+#: Template/Clubs/view.ctp:42
+#: Template/Tournaments/view.ctp:51
+#: Template/Users/index.ctp:26
+msgid "View user details"
+msgstr "Ver detalles del usuario"
+
+#: Template/Element/NavBar/navAdmin.ctp:14
+msgid "Add a club"
+msgstr "Añadir un club"
+
+#: Template/Element/NavBar/navAdmin.ctp:15
+msgid "Add a admin"
+msgstr "Agregar un administrador"
+
+#: Template/Element/NavBar/navAdmin.ctp:16
+#: Template/Element/NavBar/navPlayer.ctp:11
+#: Template/Layout/default.ctp:75
+msgid "Pages"
+msgstr "Páginas"
+
+#: Template/Element/NavBar/navAdmin.ctp:17
+#: Template/Layout/default.ctp:76
+msgid "View all account"
+msgstr "Ver toda la cuenta"
+
+#: Template/Element/NavBar/navAdmin.ctp:18
+#: Template/Element/NavBar/navPlayer.ctp:13
+#: Template/Layout/default.ctp:77
+msgid "List Clubs"
+msgstr "Lista de Clubes"
+
+#: Template/Element/NavBar/navAdmin.ctp:19
+#: Template/Element/NavBar/navPlayer.ctp:14
+#: Template/Layout/default.ctp:78
+#: Template/Matches/add.ctp:11
+#: Template/Matches/edit.ctp:17
+#: Template/Matches/index.ctp:11
+#: Template/Matches/view.ctp:14
+#: Template/PlayerTournamentParticipations/add.ctp:13
+#: Template/PlayerTournamentParticipations/edit.ctp:19
+#: Template/PlayerTournamentParticipations/index.ctp:13
+#: Template/PlayerTournamentParticipations/view.ctp:16
+msgid "List Tournaments"
+msgstr "Lista de torneos"
+
+#: Template/Element/NavBar/navPlayer.ctp:12
+msgid "View my player account"
+msgstr "Ver mi cuenta de jugador"
+
+#: Template/Layout/default.ctp:47
+msgid "Logout"
+msgstr "Salir"
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr "Error"
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr "Espalda"
+
+#: Template/Matches/add.ctp:10
+#: Template/Matches/edit.ctp:16
+#: Template/Matches/view.ctp:12
+msgid "List Matches"
+msgstr "Lista de partidos"
+
+#: Template/Matches/add.ctp:12
+#: Template/Matches/edit.ctp:18
+#: Template/Matches/index.ctp:12
+#: Template/Matches/view.ctp:15
+#: Template/PlayerTournamentParticipations/add.ctp:14
+#: Template/PlayerTournamentParticipations/edit.ctp:20
+#: Template/PlayerTournamentParticipations/index.ctp:14
+#: Template/PlayerTournamentParticipations/view.ctp:17
+msgid "New Tournament"
+msgstr "Nuevo torneo"
+
+#: Template/Matches/add.ctp:13
+#: Template/Matches/edit.ctp:19
+#: Template/Matches/index.ctp:13
+#: Template/Matches/view.ctp:16
+#: Template/RefResults/add.ctp:10
+#: Template/RefResults/edit.ctp:16
+#: Template/RefResults/view.ctp:12
+msgid "List Ref Results"
+msgstr "Lista de resultados de referencia"
+
+#: Template/Matches/add.ctp:14
+#: Template/Matches/edit.ctp:20
+#: Template/Matches/index.ctp:14
+#: Template/Matches/view.ctp:17
+#: Template/RefResults/index.ctp:10
+#: Template/RefResults/view.ctp:13
+msgid "New Ref Result"
+msgstr "Nuevo resultado de referencia"
+
+#: Template/Matches/add.ctp:20
+msgid "Add Match"
+msgstr "Añadir partido"
+
+#: Template/Matches/add.ctp:26
+#: Template/Matches/edit.ctp:32
+#: Template/PlayerTournamentParticipations/add.ctp:25
+#: Template/PlayerTournamentParticipations/edit.ctp:31
+#: Template/Players/add.ctp:17
+#: Template/Players/edit.ctp:17
+#: Template/RefResults/add.ctp:21
+#: Template/RefResults/edit.ctp:27
+msgid "Submit"
+msgstr "presentar"
+
+#: Template/Matches/edit.ctp:11
+#: Template/Matches/index.ctp:47
+#: Template/PlayerTournamentParticipations/edit.ctp:11
+#: Template/PlayerTournamentParticipations/index.ctp:41
+#: Template/Players/index.ctp:34
+#: Template/RefResults/edit.ctp:11
+#: Template/RefResults/index.ctp:35
+msgid "Delete"
+msgstr "borrar"
+
+#: Template/Matches/edit.ctp:13
+#: Template/Matches/index.ctp:47
+#: Template/Matches/view.ctp:11
+#: Template/PlayerTournamentParticipations/edit.ctp:13
+#: Template/PlayerTournamentParticipations/index.ctp:41
+#: Template/PlayerTournamentParticipations/view.ctp:11
+#: Template/Players/index.ctp:34
+#: Template/RefResults/edit.ctp:13
+#: Template/RefResults/index.ctp:35
+#: Template/RefResults/view.ctp:11
+msgid "Are you sure you want to delete # {0}?"
+msgstr "Estás seguro de que quieres eliminar # {0}?"
+
+#: Template/Matches/edit.ctp:26
+#: Template/Matches/view.ctp:10
+msgid "Edit Match"
+msgstr "Editar partido"
+
+#: Template/Matches/index.ctp:10
+#: Template/Matches/view.ctp:13
+msgid "New Match"
+msgstr "Nuevo partido"
+
+#: Template/Matches/index.ctp:18
+msgid "Matches"
+msgstr "Partidos"
+
+#: Template/Matches/index.ctp:45
+#: Template/PlayerTournamentParticipations/index.ctp:39
+#: Template/Players/index.ctp:32
+#: Template/RefResults/index.ctp:33
+msgid "View"
+msgstr "Ver"
+
+#: Template/Matches/index.ctp:46
+#: Template/PlayerTournamentParticipations/index.ctp:40
+#: Template/Players/index.ctp:33
+#: Template/RefResults/index.ctp:34
+msgid "Edit"
+msgstr "Editar"
+
+#: Template/Matches/view.ctp:11
+msgid "Delete Match"
+msgstr "Eliminar partido"
+
+#: Template/Matches/view.ctp:24
+#: Template/PlayerTournamentParticipations/view.ctp:28
+#: Template/Tournaments/index.ctp:13
+msgid "Tournament"
+msgstr "Torneo"
+
+#: Template/Matches/view.ctp:28
+msgid "Ref Result"
+msgstr "Resultado de referencia"
+
+#: Template/Matches/view.ctp:32
+msgid "Player Id 1"
+msgstr "ID del jugador 1"
+
+#: Template/Matches/view.ctp:36
+msgid "Player Id 2"
+msgstr "ID del jugador 2"
+
+#: Template/Matches/view.ctp:40
+msgid "Start Time"
+msgstr "Hora de inicio"
+
+#: Template/Matches/view.ctp:44
+msgid "End Time"
+msgstr "Hora de finalización"
+
+#: Template/PlayerTournamentParticipations/add.ctp:10
+#: Template/PlayerTournamentParticipations/edit.ctp:16
+#: Template/PlayerTournamentParticipations/view.ctp:12
+msgid "List Player Tournament Participations"
+msgstr "Lista de jugadores Participaciones en torneos"
+
+#: Template/PlayerTournamentParticipations/add.ctp:11
+#: Template/PlayerTournamentParticipations/edit.ctp:17
+#: Template/PlayerTournamentParticipations/index.ctp:11
+#: Template/PlayerTournamentParticipations/view.ctp:14
+msgid "List Users"
+msgstr "Lista de Usuarios"
+
+#: Template/PlayerTournamentParticipations/add.ctp:12
+#: Template/PlayerTournamentParticipations/edit.ctp:18
+#: Template/PlayerTournamentParticipations/index.ctp:12
+#: Template/PlayerTournamentParticipations/view.ctp:15
+msgid "New User"
+msgstr "Nuevo usuario"
+
+#: Template/PlayerTournamentParticipations/add.ctp:20
+msgid "Add Player Tournament Participation"
+msgstr "Añadir Participación al Torneo del Jugador"
+
+#: Template/PlayerTournamentParticipations/edit.ctp:26
+#: Template/PlayerTournamentParticipations/view.ctp:10
+msgid "Edit Player Tournament Participation"
+msgstr "Editar jugador torneo participación"
+
+#: Template/PlayerTournamentParticipations/index.ctp:10
+#: Template/PlayerTournamentParticipations/view.ctp:13
+msgid "New Player Tournament Participation"
+msgstr "Participación en torneos de nuevos jugadores"
+
+#: Template/PlayerTournamentParticipations/index.ctp:18
+msgid "Player Tournament Participations"
+msgstr "Participaciones en torneos de jugadores"
+
+#: Template/PlayerTournamentParticipations/view.ctp:11
+msgid "Delete Player Tournament Participation"
+msgstr "Eliminar la participación en el torneo del jugador"
+
+#: Template/PlayerTournamentParticipations/view.ctp:24
+msgid "User"
+msgstr "Usuario"
+
+#: Template/PlayerTournamentParticipations/view.ctp:32
+msgid "Final Result"
+msgstr "Resultado final"
+
+#: Template/Players/add.ctp:11
+msgid "Add Player"
+msgstr "Añadir jugador"
+
+#: Template/Players/edit.ctp:11
+msgid "Edit Player"
+msgstr "Editar jugador"
+
+#: Template/Players/index.ctp:11
+msgid "Players"
+msgstr "Jugadores"
+
+#: Template/Players/view.ctp:12
+#: Template/Users/view.ctp:15
+msgid "Second name"
+msgstr "Segundo nombre"
+
+#: Template/Players/view.ctp:20
+#: Template/Users/index.ctp:15
+#: Template/Users/view.ctp:23
+msgid "Email"
+msgstr "Email"
+
+#: Template/Players/view.ctp:24
+#: Template/Users/view.ctp:27
+msgid "Role"
+msgstr "Papel"
+
+#: Template/Players/view.ctp:28
+msgid "Club"
+msgstr "Club"
+
+#: Template/RefResults/add.ctp:16
+msgid "Add Ref Result"
+msgstr "Añadir resultado de referencia"
+
+#: Template/RefResults/edit.ctp:22
+#: Template/RefResults/view.ctp:10
+msgid "Edit Ref Result"
+msgstr "Editar Ref Resultado"
+
+#: Template/RefResults/index.ctp:14
+msgid "Ref Results"
+msgstr "Resultados de referencia"
+
+#: Template/RefResults/view.ctp:11
+msgid "Delete Ref Result"
+msgstr "Eliminar Ref Resultado"
+
+#: Template/RefResults/view.ctp:20
+msgid "Result Description"
+msgstr "Descripción del resultado"
+
+#: Template/RefResults/view.ctp:24
+msgid "Id"
+msgstr "Id"
+
+#: Template/Tournaments/edit.ctp:12
+#: Template/Tournaments/index.ctp:34
+msgid "Edit the tournament"
+msgstr "Editar el torneo"
+
+#: Template/Tournaments/index.ctp:33
+msgid "View details of the tournament"
+msgstr "Ver detalles del torneo."
+
+#: Template/Tournaments/index.ctp:35
+msgid "Delete the tournament"
+msgstr "Eliminar el torneo"
+
+#: Template/Tournaments/index.ctp:35
+msgid "Are you sure you want to delete the tournament # {0}?"
+msgstr "Estás seguro de que quieres eliminar el torneo # {0}?"
+
+#: Template/Tournaments/view.ctp:15
+msgid "Subscribe to the tournament"
+msgstr "Suscríbete al torneo."
+
+#: Template/Tournaments/view.ctp:18
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+#: Template/Tournaments/view.ctp:22
+msgid "End date"
+msgstr "Fecha final"
+
+#: Template/Tournaments/view.ctp:37
+msgid "Participating players"
+msgstr "Jugadores participantes"
+
+#: Template/Tournaments/view.ctp:41
+msgid "First Name"
+msgstr "Nombre de pila"
+
+#: Template/Tournaments/view.ctp:42
+msgid "Last Name"
+msgstr "Apellido"
+
+#: Template/Users/add_admin.ctp:11
+#: Template/Users/add_player.ctp:11
+msgid "Add a user"
+msgstr "Agregar un usuario"
+
+#: Template/Users/add_admin.ctp:13
+#: Template/Users/add_player.ctp:13
+#: Template/Users/edit.ctp:13
+msgid "first_name"
+msgstr "nombre de pila"
+
+#: Template/Users/add_admin.ctp:14
+#: Template/Users/add_player.ctp:14
+#: Template/Users/edit.ctp:14
+msgid "second_name"
+msgstr "segundo nombre"
+
+#: Template/Users/add_admin.ctp:15
+#: Template/Users/add_player.ctp:15
+#: Template/Users/edit.ctp:15
+msgid "last_name"
+msgstr "apellido"
+
+#: Template/Users/add_admin.ctp:16
+#: Template/Users/add_player.ctp:16
+#: Template/Users/edit.ctp:16
+#: Template/Users/login.ctp:13
+msgid "email"
+msgstr "email"
+
+#: Template/Users/add_admin.ctp:17
+#: Template/Users/add_player.ctp:17
+#: Template/Users/edit.ctp:17
+#: Template/Users/login.ctp:14
+msgid "password"
+msgstr "contraseña"
+
+#: Template/Users/add_admin.ctp:20
+#: Template/Users/add_player.ctp:21
+#: Template/Users/edit.ctp:21
+msgid "Submit the user"
+msgstr "Enviar el usuario"
+
+#: Template/Users/add_player.ctp:18
+msgid "club_id"
+msgstr "club_id"
+
+#: Template/Users/edit.ctp:11
+#: Template/Users/index.ctp:27
+#: Template/Users/view.ctp:39
+msgid "Edit the user"
+msgstr "Editar el usuario"
+
+#: Template/Users/index.ctp:9
+msgid "Users"
+msgstr "Usuarios"
+
+#: Template/Users/index.ctp:28
+#: Template/Users/view.ctp:40
+msgid "Delete the user"
+msgstr "Borrar el usuario"
+
+#: Template/Users/index.ctp:28
+#: Template/Users/view.ctp:40
+msgid "Are you sure you want to delete the user # {0}?"
+msgstr "Estás seguro de que quieres eliminar el usuario # {0}?"
+
+#: Template/Users/login.ctp:10;16
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: Template/Users/login.ctp:17
+msgid "Create a account"
+msgstr "Crear una cuenta"
+
