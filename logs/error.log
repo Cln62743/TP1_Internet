@@ -16968,3 +16968,93 @@ Stack Trace:
 #30 {main}
 
 
+2018-11-01 18:35:50 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\src\Template\Clubs\index.ctp, line 37]
+Request URL: /clubs
+Referer URL: http://localhost/Appli_Session_5/ChessTournament_V1/players/view/19
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-01 18:35:50 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO) in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\src\Template\Clubs\index.ctp on line 37
+Request URL: /clubs
+Referer URL: http://localhost/Appli_Session_5/ChessTournament_V1/players/view/19
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\Program File...', 37)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-01 18:37:29 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in [C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\src\Template\Clubs\index.ctp, line 39]
+Request URL: /clubs
+Referer URL: http://localhost/Appli_Session_5/ChessTournament_V1/players/view/19
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-01 18:37:29 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\src\Template\Clubs\index.ctp on line 39
+Request URL: /clubs
+Referer URL: http://localhost/Appli_Session_5/ChessTournament_V1/players/view/19
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\Program File...', 39)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-01 18:44:24 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "clubs" with primary key [NULL]
+Request URL: /clubs/view
+Referer URL: http://localhost/Appli_Session_5/ChessTournament_V1/players/view/19
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\src\Controller\ClubsController.php(56): Cake\ORM\Table->get(NULL)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\ClubsController->view()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ClubsController))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+
+
+2018-11-01 18:44:59 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "clubs" with primary key [NULL]
+Request URL: /clubs/view
+Referer URL: http://localhost/Appli_Session_5/ChessTournament_V1/players/view/19
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\src\Controller\ClubsController.php(56): Cake\ORM\Table->get(NULL)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\ClubsController->view()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ClubsController))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+
+

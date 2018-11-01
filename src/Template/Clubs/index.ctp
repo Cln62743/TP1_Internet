@@ -6,7 +6,7 @@
 ?>
 
 <!-- For each show all the clubs -->
-<div class="clubs index large-9 medium-8 columns content">
+<div class="clubs index large-12 medium-8 columns content">
     <h3><?= __('Clubs') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
@@ -24,8 +24,8 @@
                 <td><?php
                 if(!empty($club->icon)){
                     echo $this->Html->image($club->icon, [
-                        "width" => "66px",
-                        "height" => "45px",
+                        "width" => "44px",
+                        "height" => "30px",
                         'url' => ['action' => 'view', $club->id]
                     ]);
                 }
@@ -34,8 +34,8 @@
                 <td><?= h($club->created) ?></td>
                 <td><?= h($club->modified) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View details of the club'), ['action' => 'view', $club->id]) ?>
-                    <?= $this->Html->link(__('Edit the club'), ['action' => 'edit', $club->id]) ?>
+                    <?= $this->Html->link(__('View details of the club'), ['action' => 'view', $club->id]) ?><br>
+                    <?= $this->Html->link(__('Edit the club'), ['action' => 'edit', $club->id]) ?><br>
                     <?= $this->Form->postLink(__('Delete the club'), ['action' => 'delete', $club->id], ['confirm' => __('Are you sure you want to delete the club # {0}?', $club->id)]) ?>
                 </td>
             </tr>

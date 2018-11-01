@@ -27,7 +27,7 @@
         <tr>
             <th scope="row"><?= __('Club') ?></th>
             <?php if($club){ ?>
-                <td><?= $this->Html->link(__(h($club->name)), ['controller' => 'clubs', 'action' => 'view', $club->club_id]) ?></td>
+                <td><?= $this->Html->link(__(h($club->clubName)), ['controller' => 'clubs', 'action' => 'view', $club->id]) ?></td>
             <?php } ?>
         </tr>
         <tr>
