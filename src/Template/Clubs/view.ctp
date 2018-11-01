@@ -8,6 +8,18 @@
 <div class="clubs view large-9 medium-8 columns content">
     <h3><?= h($club->name) ?></h3>
     <table class="vertical-table">
+        <td><?php
+            echo $this->Html->image($file->path . $file->name, [
+                "alt" => $file->name,
+                "width" => "220px",
+                "height" => "150px",
+                'url' => ['action' => 'view', $file->id]
+            ]);  
+        ?></td>
+        <tr>
+            <th scope="row"><?= __('Path') ?></th>
+            <td><?= h($file->path) ?></td>
+        </tr>
         <tr>
             <th scope="row"><?= __('Name of the club') ?></th>
             <td><?= h($club->name) ?></td>

@@ -36,19 +36,13 @@ class ClubsTable extends Table
         parent::initialize($config);
 
         $this->setTable('clubs');
-        $this->setDisplayField('name');
+        $this->setDisplayField('clubName');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
 
         $this->hasMany('Players', [
             'foreignKey' => 'club_id'
-        ]);
-        
-        $this->belongsToMany('Files', [
-            'foreignKey' => 'club_id',
-            'targetForeignKey' => 'file_id',
-            'joinTable' => 'clubs_files'
         ]);
     }
 
@@ -65,11 +59,11 @@ class ClubsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->scalar('name')
-            ->maxLength('name', 50)
-            ->requirePresence('name', 'create')
-            ->notEmpty('name')
-            ->add('name', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+            ->scalar('clubName')
+            ->maxLength('clubName', 50)
+            ->requirePresence('clubName', 'create')
+            ->notEmpty('clubName')
+            ->add('clubName', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         return $validator;
     }
@@ -83,7 +77,7 @@ class ClubsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['name']));
+        $rules->add($rules->isUnique(['clubName']));
 
         return $rules;
     }

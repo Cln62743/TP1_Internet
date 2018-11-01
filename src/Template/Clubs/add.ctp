@@ -6,12 +6,14 @@
 ?>
 
 <div class="clubs form large-9 medium-8 columns content">
-    <?= $this->Form->create($club) ?>
+    <?php echo $this->Form->create($club, ['type' => 'file']) ?>
     <fieldset>
         <legend><?= __('Add a club') ?></legend>
         <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('files._ids', ['options' => $files]);
+            echo $this->Form->input('icon', ['type' => 'file']);
+            echo $this->Form->input('icon_dir');
+            echo $this->Form->input('clubName');
+            //echo $this->Form->control('files._ids', ['options' => $files]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit the club')) ?>

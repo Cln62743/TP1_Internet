@@ -26,7 +26,9 @@ class Club extends Entity
      * @var array
      */
     protected $_accessible = [
-        'name' => true,
+        'clubName' => true,
+        'icon' => true,
+        'icon_dir' => true,
         'created' => true,
         'modified' => true,
         'users' => true

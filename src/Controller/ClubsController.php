@@ -88,7 +88,17 @@ class ClubsController extends AppController
     public function add()
     {
         $club = $this->Clubs->newEntity();
-        if ($this->request->is('post')) {
+        if ($this->request->is('post')) {          
+            if (!empty($this->request->data['icon']['name'])) {
+                $fileName = $this->request->data['icon']['name'];
+                
+                $uploadPath = 'img/Files/';
+                $uploadFile = $uploadPath.$fileName;
+                if(move_uploaded_file($this->request->data['icon']['tmp_name'], $uploadFile)){
+                    $this->request->data['icon'] = $fileName;
+                }
+            } 
+            
             $club = $this->Clubs->patchEntity($club, $this->request->getData());
             if ($this->Clubs->save($club)) {
                 $this->Flash->success(__('The club has been saved.'));
@@ -97,8 +107,7 @@ class ClubsController extends AppController
             }
             $this->Flash->error(__('The club could not be saved. Please, try again.'));
         }
-        $files = $this->Articles->files->find('list', ['limit' => 200]);
-        $this->set(compact('club', 'files'));
+        $this->set(compact('club'));
     }
 
     /**
@@ -114,6 +123,16 @@ class ClubsController extends AppController
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
+            if (!empty($this->request->data['icon']['name'])) {
+                $fileName = $this->request->data['icon']['name'];
+                
+                $uploadPath = 'img/Files/';
+                $uploadFile = $uploadPath.$fileName;
+                if(move_uploaded_file($this->request->data['icon']['tmp_name'], $uploadFile)){
+                    $this->request->data['icon'] = $fileName;
+                }
+            } 
+            
             $club = $this->Clubs->patchEntity($club, $this->request->getData());
             if ($this->Clubs->save($club)) {
                 $this->Flash->success(__('The club has been saved.'));

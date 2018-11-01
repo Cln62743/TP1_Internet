@@ -10,6 +10,8 @@
     <fieldset>
         <legend><?= __('Edit the club') ?></legend>
         <?php
+            echo $this->Form->control('name', ['type' => 'file']);
+            echo $this->Form->control('status', ['type' => 'checkbox']);
             echo $this->Form->control('name');
             echo $this->Form->control('files._ids', ['options' => $files]);
         ?>

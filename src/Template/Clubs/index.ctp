@@ -11,6 +11,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <th scope="col"><?= __('Preview') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Name of the club') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Modified') ?></th>
@@ -20,7 +21,16 @@
         <tbody>
             <?php foreach ($clubs as $club): ?>
             <tr>
-                <td><?= h($club->name) ?></td>
+                <td><?php
+                if(!empty($club->icon)){
+                    echo $this->Html->image($club->icon, [
+                        "width" => "220px",
+                        "height" => "150px",
+                        'url' => ['action' => 'view', $club->id]
+                    ]);
+                }
+                ?></td>
+                <td><?= h($club->clubName) ?></td>
                 <td><?= h($club->created) ?></td>
                 <td><?= h($club->modified) ?></td>
                 <td class="actions">
