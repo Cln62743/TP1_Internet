@@ -61,19 +61,24 @@ class TournamentsController extends AppController
     public function view($id = null)
     {
         $tournament = $this->Tournaments->get($id, [
-            'contain' => ['PlayerTournamentParticipations']
-        ]);     
+            'contain' => [
+                'Players' => ['Users']
+                ]
+        ]);
         
         $usersTable = TableRegistry::get('Users');
-        $players_id = AppController::array_on_key($tournament['player_tournament_participations'], 'player_id');
+//        $players_id = AppController::array_on_key($tournament['player_tournament_participations'], 'player_id');
         
-        if($players_id){
-            $players = $usersTable
-                ->find()
-                ->where(['player_id IN' => $players_id])
-                ->toList();
-        }    
-        $this->set(compact('tournament', 'players'));
+//        $players = array();
+//        if($players_id){
+//            $players = $usersTable
+//                ->find()
+//                ->where(['player_id IN' => $players_id])
+//                ->toList();
+//        }
+        
+        $user = $this->Auth->user();
+        $this->set(compact('tournament', 'players', 'user'));
     }
     
     /**
@@ -141,5 +146,20 @@ class TournamentsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+    
+    public function subscribe($id){
+        $user = $this->Auth->user();
+        
+        $subcribtion = $this->PlayerTournamentParticipations->newEntity();            
+        $subcribtion->player_id = $user['player_id'];
+        $subcribtion->tournament_id = $id;
+
+        if ($this->PlayerTournamentParticipations->save($subcribtion)) {
+            $this->Flash->success(__('The player registration has been saved.'));               
+        }else{
+            $this->Flash->error(__('The player registration could not be saved. Please, try again.'));
+        }        
+        return $this->redirect(['controller' => 'tournaments', 'action' => 'view', $id]);
     }
 }

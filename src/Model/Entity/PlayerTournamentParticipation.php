@@ -4,15 +4,14 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * PlayerTournamentParticipation Entity
+ * Player Entity
  *
  * @property int $player_id
  * @property int $tournament_id
- * @property string $final_result
  * @property \Cake\I18n\FrozenDate $created
  * @property \Cake\I18n\FrozenDate $modified
  *
- * @property \App\Model\Entity\User $user
+ * @property \App\Model\Entity\Player $player
  * @property \App\Model\Entity\Tournament $tournament
  */
 class PlayerTournamentParticipation extends Entity
@@ -28,10 +27,9 @@ class PlayerTournamentParticipation extends Entity
      * @var array
      */
     protected $_accessible = [
-        'final_result' => true,
+        'player_id' => true,
+        'tournament_id' => true,
         'created' => true,
         'modified' => true,
-        'user' => true,
-        'tournament' => true
     ];
 }

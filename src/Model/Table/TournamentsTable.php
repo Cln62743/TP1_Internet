@@ -12,8 +12,11 @@ class TournamentsTable extends Table
     {
         $this->addBehavior('Timestamp');
         $this->addBehavior('Translate', ['field' => ['name']]);
-        $this->hasMany('PlayerTournamentParticipations', [
-            'foreignKey' => 'tournament_id'
+        
+        $this->belongsToMany('Players', [
+            'foreignKey' => 'tournament_id',
+            'targetForeignKey' => 'player_id',
+            'joinTable' => 'player_tournament_participations'
         ]);
     }
     

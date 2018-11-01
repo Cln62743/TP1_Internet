@@ -55,10 +55,6 @@ class ClubsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
-
-        $validator
             ->scalar('clubName')
             ->maxLength('clubName', 50)
             ->requirePresence('clubName', 'create')

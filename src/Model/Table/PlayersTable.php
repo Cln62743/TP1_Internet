@@ -49,8 +49,11 @@ class PlayersTable extends Table
         $this->belongsTo('Clubs', [
             'foreignKey' => 'club_id'
         ]);
-        $this->hasMany('PlayerTournamentParticipations', [
-            'foreignKey' => 'player_id'
+        
+        $this->belongsToMany('Tournaments', [
+            'foreignKey' => 'player_id',
+            'targetForeignKey' => 'tournament_id',
+            'joinTable' => 'player_tournament_participations'
         ]);
     }
 

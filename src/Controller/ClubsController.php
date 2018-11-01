@@ -53,10 +53,7 @@ class ClubsController extends AppController
      */
     public function view($id = null)
     {
-        $club = $this->Clubs->get($id, [
-            'contain' => ['files']
-        ]); 
-        
+        $club = $this->Clubs->get($id); 
         
         $usersTable = TableRegistry::get('Users');
         $playersTable = TableRegistry::get('Players');
@@ -95,9 +92,9 @@ class ClubsController extends AppController
                 $uploadPath = 'img/Files/';
                 $uploadFile = $uploadPath.$fileName;
                 if(move_uploaded_file($this->request->data['icon']['tmp_name'], $uploadFile)){
-                    $this->request->data['icon'] = $fileName;
+                    $this->request->data['icon'] = 'Files/' . $fileName;
                 }
-            } 
+            }
             
             $club = $this->Clubs->patchEntity($club, $this->request->getData());
             if ($this->Clubs->save($club)) {
@@ -129,9 +126,9 @@ class ClubsController extends AppController
                 $uploadPath = 'img/Files/';
                 $uploadFile = $uploadPath.$fileName;
                 if(move_uploaded_file($this->request->data['icon']['tmp_name'], $uploadFile)){
-                    $this->request->data['icon'] = $fileName;
+                    $this->request->data['icon'] = 'Files/' . $fileName;
                 }
-            } 
+            }
             
             $club = $this->Clubs->patchEntity($club, $this->request->getData());
             if ($this->Clubs->save($club)) {
@@ -141,8 +138,7 @@ class ClubsController extends AppController
             }
             $this->Flash->error(__('The club could not be saved. Please, try again.'));
         }
-        $files = $this->Clubs->files->find('list', ['limit' => 200]);
-        $this->set(compact('club', 'files'));
+        $this->set(compact('club'));
     }
 
     /**

@@ -5,9 +5,6 @@
  */
 ?>
 
-<!-- Navbar -- Fail safe need to be globalise and modify on user permission -->
-
-
 <!-- -->
 <div class="tournaments index large-9 medium-8 columns content">
     <h3><?= __('Tournament') ?></h3>

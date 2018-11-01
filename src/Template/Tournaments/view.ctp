@@ -10,9 +10,13 @@
 <p><?= h($tournament->body) ?></p>
 
 <!-- Affichage des objets TODO modifier pour que les valeurs concorde avec le projet -->
-<div class="Tournaments view large-9 medium-8 columns content">
+<div class="Tournaments view large-12 medium-8 columns content">
     <h3><?= h($tournament->name) ?></h3>
-    <li><?= $this->Html->link(__('Subscribe to the tournament'),['controller' => 'playerTournamentParticipations', 'action' => 'subscribe', $tournament->id]) ?></li>
+    <?php if($user['role'] === 'player'){ ?>
+    <li>
+        <?= $this->Html->link(__('Subscribe to the tournament'),['controller' => 'playerTournamentParticipations', 'action' => 'subscribe', $tournament->id]) ?>
+    </li>
+    <?php } ?>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Start date') ?></th>
@@ -33,22 +37,22 @@
     </table>
 </div>
 
-<div class="Tournaments view large-9 medium-8 columns content">
+<div class="Players view large-12 medium-8 content">
     <h3><?= __('Participating players') ?></h3>
     <table cellpadding="0" cellspacing="0">
-        <thead>
+        <head>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort(__('First Name')) ?></th>
                 <th scope="col"><?= $this->Paginator->sort(__('Last Name')) ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
-        </thead>
+        </head>
         <tbody>
-            <?php foreach ($players as $player): ?>
+            <?php foreach ($tournament->players as $player): ?>
                 <tr>
-                    <td><?= h($player->first_name) ?></td>
-                    <td><?= h($player->last_name) ?></td>
-                    <td><?= $this->Html->link(__('View user details'), ['controller' => 'users', 'action' => 'view', $player->id]) ?></td>
+                    <td><?= h($player->user->first_name) ?></td>
+                    <td><?= h($player->user->last_name) ?></td>
+                    <td><?= $this->Html->link(__('View user details'), ['controller' => 'users', 'action' => 'view', $player->user->id]) ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

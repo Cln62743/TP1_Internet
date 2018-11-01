@@ -35,6 +35,7 @@ class Player extends Entity
         'modified' => true,
         'user' => true,
         'club' => true,
+        'tournaments' => true,
         'player_tournament_participations' => true
     ];
 }

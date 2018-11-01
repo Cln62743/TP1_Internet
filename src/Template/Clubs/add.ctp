@@ -11,9 +11,7 @@
         <legend><?= __('Add a club') ?></legend>
         <?php
             echo $this->Form->input('icon', ['type' => 'file']);
-            echo $this->Form->input('icon_dir');
             echo $this->Form->input('clubName');
-            //echo $this->Form->control('files._ids', ['options' => $files]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit the club')) ?>

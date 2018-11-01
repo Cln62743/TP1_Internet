@@ -24,8 +24,8 @@
                 <td><?php
                 if(!empty($club->icon)){
                     echo $this->Html->image($club->icon, [
-                        "width" => "220px",
-                        "height" => "150px",
+                        "width" => "66px",
+                        "height" => "45px",
                         'url' => ['action' => 'view', $club->id]
                     ]);
                 }
