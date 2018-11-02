@@ -203,11 +203,18 @@ return [
             'host' => 'localhost',
             'port' => 25,
             'timeout' => 30,
-            'username' => null,
-            'password' => null,
+            'username' => 'user',
+            'password' => 'secret',
             'client' => null,
             'tls' => null,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+        ],
+        'gmail' => [
+            'host' => 'ssl://smtp.gmail.com',
+            'port' => 465,
+            'username' => 'chesstournamentappliinternet@gmail.com',
+            'password' => 'APP PASSWORD',
+            'className' => 'Smtp'
         ],
     ],
 
