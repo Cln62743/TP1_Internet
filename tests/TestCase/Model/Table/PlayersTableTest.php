@@ -16,7 +16,7 @@ class PlayersTableTest extends TestCase
      *
      * @var \App\Model\Table\PlayersTable
      */
-    public $Players;
+    public $PlayersTable;
 
     /**
      * Fixtures
@@ -27,7 +27,7 @@ class PlayersTableTest extends TestCase
         'app.players',
         'app.users',
         'app.clubs',
-        'app.player_tournament_participations'
+        'app.tournaments'
     ];
 
     /**
@@ -39,7 +39,7 @@ class PlayersTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('Players') ? [] : ['className' => PlayersTable::class];
-        $this->Players = TableRegistry::getTableLocator()->get('Players', $config);
+        $this->PlayersTable = TableRegistry::getTableLocator()->get('Players', $config);
     }
 
     /**
@@ -49,7 +49,7 @@ class PlayersTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Players);
+        unset($this->PlayersTable);
 
         parent::tearDown();
     }

@@ -17,56 +17,36 @@ class PlayerTournamentParticipationsControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.player_tournament_participations',
-        'app.users',
+        'app.players',
         'app.tournaments'
     ];
 
     /**
-     * Test index method
+     * Test initialize method
      *
      * @return void
      */
-    public function testIndex()
+    public function testInitialize()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
 
     /**
-     * Test view method
+     * Test beforeFilter method
      *
      * @return void
      */
-    public function testView()
+    public function testBeforeFilter()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
 
     /**
-     * Test add method
+     * Test subscribe method
      *
      * @return void
      */
-    public function testAdd()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test edit method
-     *
-     * @return void
-     */
-    public function testEdit()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test delete method
-     *
-     * @return void
-     */
-    public function testDelete()
+    public function testSubscribe()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

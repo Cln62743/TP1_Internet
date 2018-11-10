@@ -19,15 +19,15 @@ class PlayersControllerTest extends IntegrationTestCase
         'app.players',
         'app.users',
         'app.clubs',
-        'app.player_tournament_participations'
+        'app.tournaments'
     ];
 
     /**
-     * Test index method
+     * Test beforeFilter method
      *
      * @return void
      */
-    public function testIndex()
+    public function testBeforeFilter()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -38,6 +38,16 @@ class PlayersControllerTest extends IntegrationTestCase
      * @return void
      */
     public function testView()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test canView method
+     *
+     * @return void
+     */
+    public function testCanView()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

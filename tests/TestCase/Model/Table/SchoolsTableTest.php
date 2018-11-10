@@ -16,7 +16,7 @@ class SchoolsTableTest extends TestCase
      *
      * @var \App\Model\Table\SchoolsTable
      */
-    public $Schools;
+    public $SchoolsTable;
 
     /**
      * Fixtures
@@ -38,7 +38,7 @@ class SchoolsTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('Schools') ? [] : ['className' => SchoolsTable::class];
-        $this->Schools = TableRegistry::getTableLocator()->get('Schools', $config);
+        $this->SchoolsTable = TableRegistry::getTableLocator()->get('Schools', $config);
     }
 
     /**
@@ -48,7 +48,7 @@ class SchoolsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Schools);
+        unset($this->SchoolsTable);
 
         parent::tearDown();
     }

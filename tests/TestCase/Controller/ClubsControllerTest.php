@@ -17,7 +17,7 @@ class ClubsControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.clubs',
-        'app.users'
+        'app.players'
     ];
 
     /**
@@ -26,6 +26,16 @@ class ClubsControllerTest extends IntegrationTestCase
      * @return void
      */
     public function testIndex()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test beforeFilter method
+     *
+     * @return void
+     */
+    public function testBeforeFilter()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

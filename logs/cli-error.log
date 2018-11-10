@@ -96,3 +96,53 @@ Stack Trace:
 #20 {main}
 
 
+2018-11-10 18:45:26 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\TournamentsFixture" not found. Fixture "app.tournaments" was referenced in test case "App\Test\TestCase\Controller\CitiesControllerTest". in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-10 18:46:21 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\TournamentsFixture" not found. Fixture "app.tournaments" was referenced in test case "App\Test\TestCase\Controller\CitiesControllerTest". in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-10 19:10:08 Warning: Warning (2): Declaration of App\Controller\SchoolsController::beforeFilter(App\Controller\Event $event) should be compatible with App\Controller\AppController::beforeFilter(Cake\Event\Event $event) in [C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\src\Controller\SchoolsController.php, line 13]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Controller\SchoolsController.php, line 13
+Composer\Autoload\includeFile - ROOT\vendor\composer\ClassLoader.php, line 444
+Composer\Autoload\ClassLoader::loadClass() - ROOT\vendor\composer\ClassLoader.php, line 322
+spl_autoload_call - [internal], line ??
+class_exists - [internal], line ??
+Bake\Shell\Task\TestTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\TestTask.php, line 235
+Bake\Shell\Task\TestTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\TestTask.php, line 124
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 532
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 525
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 342
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
+[main] - ROOT\bin\cake.php, line 12
+
+
+

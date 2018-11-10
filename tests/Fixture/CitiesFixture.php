@@ -43,8 +43,8 @@ class CitiesFixture extends TestFixture
             [
                 'id' => 1,
                 'name' => 'Lorem ipsum dolor sit amet',
-                'created' => '2018-11-04',
-                'modified' => '2018-11-04'
+                'created' => '2018-11-10',
+                'modified' => '2018-11-10'
             ],
         ];
         parent::init();

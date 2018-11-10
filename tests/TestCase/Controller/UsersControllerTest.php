@@ -16,8 +16,39 @@ class UsersControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.users'
+        'app.users',
+        'app.players'
     ];
+
+    /**
+     * Test initialize method
+     *
+     * @return void
+     */
+    public function testInitialize()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test beforeFilter method
+     *
+     * @return void
+     */
+    public function testBeforeFilter()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test redirectAccordingToRole method
+     *
+     * @return void
+     */
+    public function testRedirectAccordingToRole()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 
     /**
      * Test index method
@@ -40,11 +71,41 @@ class UsersControllerTest extends IntegrationTestCase
     }
 
     /**
-     * Test add method
+     * Test login method
      *
      * @return void
      */
-    public function testAdd()
+    public function testLogin()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test logout method
+     *
+     * @return void
+     */
+    public function testLogout()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test addPlayer method
+     *
+     * @return void
+     */
+    public function testAddPlayer()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test addAdmin method
+     *
+     * @return void
+     */
+    public function testAddAdmin()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

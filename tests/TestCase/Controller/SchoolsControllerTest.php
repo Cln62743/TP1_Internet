@@ -22,11 +22,31 @@ class SchoolsControllerTest extends IntegrationTestCase
     ];
 
     /**
+     * Test beforeFilter method
+     *
+     * @return void
+     */
+    public function testBeforeFilter()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
      * Test index method
      *
      * @return void
      */
     public function testIndex()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test getByCity method
+     *
+     * @return void
+     */
+    public function testGetByCity()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
