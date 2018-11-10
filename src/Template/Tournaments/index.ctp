@@ -4,17 +4,37 @@
  * @var \App\Model\Entity\Tournament[]|\Cake\Collection\CollectionInterface $tournaments
  */
 ?>
+<?php
+    $urlToAutocompleteJson = $this->Url->build([
+        "controller" => "Tournaments",
+        "action" => "findTournaments",
+        "_ext" => "json"
+            ]);
+    echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToAutocompleteJson . '";', ['block' => true]);
+    echo $this->Html->script('Tournament/index', ['block' => 'scriptBottom']);
+?>
 
 <!-- -->
-<div class="tournaments index large-9 medium-8 columns content">
+<div class="tournaments index content">
     <h3><?= __('Tournament') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
+            <?= $this->Form->create('TournamentsSearch') ?>
+                <fieldset>
+                    <legend><?= __('Search a tournament') ?></legend>
+                    <?php
+                        echo $this->Form->control('name', ['id' => 'autocomplete'])
+                    ?>
+                </fieldset>
+            <?= $this->Form->end() ?>
+            
             <tr>
                 <!-- Show club name-->
                 <th scope="col"><?= $this->Paginator->sort(__('Name of the tournament')) ?></th>
                 <th scope="col"><?= $this->Paginator->sort(__('Start date')) ?></th>
                 <th scope="col"><?= $this->Paginator->sort(__('End date')) ?></th>
+                <th scope="col"><?= $this->Paginator->sort(__('City')) ?></th>
+                <th scope="col"><?= $this->Paginator->sort(__('School')) ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -26,6 +46,8 @@
                     <td><?= h($tournament->name) ?></td>
                     <td><?= h($tournament->start_date) ?></td>
                     <td><?= h($tournament->end_date) ?></td>
+                    <td><?= h($tournament->city_id) ?></td>
+                    <td><?= h($tournament->school_id) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View details of the tournament'), ['action' => 'view', $tournament->id]) ?>
                         <?= $this->Html->link(__('Edit the tournament'), ['action' => 'edit', $tournament->id]) ?>

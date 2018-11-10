@@ -18,6 +18,16 @@ class TournamentsTable extends Table
             'targetForeignKey' => 'player_id',
             'joinTable' => 'player_tournament_participations'
         ]);
+        
+        $this->belongsTo('Cities', [
+            'foreignKey' => 'city_id',
+            'joinType' => 'INNER'
+        ]);
+        
+        $this->belongsTo('Schools', [
+            'foreignKey' => 'school_id',
+            'joinType' => 'INNER'
+        ]);
     }
     
     public function validationDefault(Validator $validator)
@@ -32,7 +42,6 @@ class TournamentsTable extends Table
             
             ->notEmpty('end_date')
             ->date('end_date');
-
         return $validator;
     }
 }

@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="tournaments form large-9 medium-8 columns content">
+<div class="tournaments form columns content">
     <?= $this->Form->create($tournament) ?>
     
     <fieldset>

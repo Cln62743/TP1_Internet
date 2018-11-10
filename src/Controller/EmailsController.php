@@ -6,7 +6,6 @@
    class EmailsController extends AppController{
       public function index(){
          $email = new Email('default');
-         $email->to('abc@gmail.com')->subject('About')->send('My message');
+         $email->to('abc@gmail.com')->subject('Lien de confirmation')->send('My message');
       }
    }
-?>

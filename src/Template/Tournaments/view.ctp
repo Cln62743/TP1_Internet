@@ -10,7 +10,7 @@
 <p><?= h($tournament->body) ?></p>
 
 <!-- Affichage des objets TODO modifier pour que les valeurs concorde avec le projet -->
-<div class="Tournaments view large-12 medium-8 columns content">
+<div class="Tournaments view columns content">
     <h3><?= h($tournament->name) ?></h3>
     <?php if($user['role'] === 'player'){ ?>
     <li>
@@ -27,6 +27,14 @@
             <td><?= h($tournament->end_date) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('City') ?></th>
+            <td><?= h($tournament->city_id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('School') ?></th>
+            <td><?= h($tournament->school_id) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Created') ?></th>
             <td><?= h($tournament->created) ?></td>
         </tr>
@@ -37,7 +45,7 @@
     </table>
 </div>
 
-<div class="Players view large-12 medium-8 content">
+<div class="Players view content">
     <h3><?= __('Participating players') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <head>

@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="users form large-9 medium-8 columns content">
+<div class="users form content">
     <?= $this->Form->create($user) ?>
     <fieldset>
         <legend><?= __('Edit the user') ?></legend>

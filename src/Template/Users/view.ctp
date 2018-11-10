@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="users view large-9 medium-8 columns content">
+<div class="users view content">
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('First name') ?></th>
@@ -36,8 +36,8 @@
             <td><?= h($user->modified) ?></td>
         </tr>
         <p>
-            <?= $this->Html->link(__('Edit the user'), ['action' => 'edit', $user->id]) ?><br>
-            <?= $this->Form->postLink(__('Delete the user'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete the user # {0}?', $user->id)]) ?>
+            <?= $this->Html->link(__('Edit the user'), ['action' => 'edit', $user->id], array('class' => 'button')) ?><br>
+            <?= $this->Form->postLink(__('Delete the user'), ['action' => 'delete', $user->id], array('class' => 'button'), ['confirm' => __('Are you sure you want to delete the user # {0}?', $user->id)]) ?>
         </p>
     </table>
 </div>

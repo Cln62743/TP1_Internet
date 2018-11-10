@@ -9,6 +9,5 @@ class Tournament extends Entity
     protected $_accessible = [
         '*' => true,
         'id' => false,
-        'players' => true,
     ];
 }

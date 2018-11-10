@@ -28,10 +28,10 @@ class TournamentsController extends AppController
         if ($user) {
            switch ($user['role']) {
             case 'player':
-                $this->Auth->allow(['index', 'view']);
+                $this->Auth->allow(['index', 'view', 'findTournament']);
                 break;
             case 'admin':
-                $this->Auth->allow(['index', 'view', 'add', 'delete']);
+                $this->Auth->allow(['index', 'view', 'add', 'delete', 'findTournament']);
                 break;
             }
         }
@@ -51,10 +51,27 @@ class TournamentsController extends AppController
         $this->set(compact('tournaments'));
     }
     
+    public function findTournaments() {
+        if ($this->request->is('ajax')) {
+
+            $this->autoRender = false;
+            $name = $this->request->query['term'];
+            $results = $this->Tournaments->find('all', array(
+                'conditions' => array('Tournaments.name LIKE ' => '%' . $name . '%')
+            ));
+
+            $resultArr = array();
+            foreach ($results as $result) {
+                $resultArr[] = array('label' => $result['name'], 'value' => $result['name']);
+            }
+            echo json_encode($resultArr);
+        }
+    }
+    
     /**
      * View method
      *
-     * @param string|null $id Article id.
+     * @param string|null $id Tournament id.
      * @return \Cake\Http\Response|void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
@@ -66,7 +83,6 @@ class TournamentsController extends AppController
                 ]
         ]);
         
-        $usersTable = TableRegistry::get('Users');
 //        $players_id = AppController::array_on_key($tournament['player_tournament_participations'], 'player_id');
         
 //        $players = array();
@@ -100,13 +116,27 @@ class TournamentsController extends AppController
             }
             $this->Flash->error(__('The tournament could not be saved. Please, try again.'));
         }
-        $this->set(compact('tournament'));
+        
+        // Bâtir la liste des villes  
+        $this->loadModel('Cities');
+        $cities = $this->Cities->find('list', ['limit' => 200]);
+        
+        // Extraire le id de la première ville
+        $cities = $cities->toArray();
+        reset($cities);
+        $city_id = key($cities);
+        
+        $schools = $this->Tournaments->Schools->find('list', [
+            'conditions' => ['Schools.city_id' => $city_id],
+        ]);
+        
+        $this->set(compact('tournament', 'cities', 'schools')); 
     }
     
     /**
      * Edit method
      *
-     * @param string|null $id Article id.
+     * @param string|null $id Tournament id.
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
@@ -130,7 +160,7 @@ class TournamentsController extends AppController
     /**
      * Delete method
      *
-     * @param string|null $id Article id.
+     * @param string|null $id Tournament id.
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
