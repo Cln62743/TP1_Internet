@@ -35,6 +35,7 @@ class TournamentsController extends AppController
                 break;
             }
         }
+        $this->Auth->allow(['autocomplete']);
     }
 
     /**
@@ -66,6 +67,10 @@ class TournamentsController extends AppController
             }
             echo json_encode($resultArr);
         }
+    }
+    
+    public function autocomplete(){
+        
     }
     
     /**

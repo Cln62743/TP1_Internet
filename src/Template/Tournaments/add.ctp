@@ -5,7 +5,7 @@
         "_ext" => "json"
             ]);
     echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
-    echo $this->Html->script('Tournament/add', ['block' => 'scriptBottom']);
+    echo $this->Html->script('Tournaments/add', ['block' => 'scriptBottom']);
 ?>
 <?php
 /**
@@ -21,8 +21,8 @@
             echo $this->Form->control(__('name'));
             echo $this->Form->control(__('start_date'));
             echo $this->Form->control(__('end_date'));
-            echo $this->Form->control(__('city_id'), ['options' => $cities]);
-            echo $this->Form->control(__('school_id'), ['options' => $schools]);
+            echo $this->Form->control('city_id', ['options' => $cities]);
+            echo $this->Form->control('school_id', ['options' => $schools]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit the tournament')) ?>

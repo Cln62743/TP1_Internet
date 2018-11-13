@@ -13,11 +13,15 @@ use Cake\ORM\TableRegistry;
  */
 class CitiesController extends AppController
 {
+    public function initialize() {
+        parent::initialize();
+        // Set the layout.
+        $this->viewBuilder()->layout('monopage');
+    }
+    
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
-        
-        $this->Auth->allow(['']);
     }
     
     /**

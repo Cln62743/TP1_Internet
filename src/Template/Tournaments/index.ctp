@@ -5,13 +5,13 @@
  */
 ?>
 <?php
-    $urlToAutocompleteJson = $this->Url->build([
-        "controller" => "Tournaments",
-        "action" => "findTournaments",
+    $urlToLinkedListFilter = $this->Url->build([
+        "controller" => "Schools",
+        "action" => "getByCity",
         "_ext" => "json"
             ]);
-    echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToAutocompleteJson . '";', ['block' => true]);
-    echo $this->Html->script('Tournament/index', ['block' => 'scriptBottom']);
+    echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+    echo $this->Html->script('Tournaments/autoComplete', ['block' => 'scriptBottom']);
 ?>
 
 <!-- -->

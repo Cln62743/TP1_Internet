@@ -23,7 +23,7 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
-Router::extensions(['json', 'xml']);
+//Router::extensions(['json', 'xml']);
 
 /**
  * The default class to use for all routes
@@ -48,6 +48,20 @@ Router::extensions(['json', 'xml']);
  */
 Router::defaultRouteClass(DashedRoute::class);
 
+Router::scope('/pdf_download/:id', function (RouteBuilder $routes) {
+    $routes->addExtensions(['pdf']);
+    $routes->connect('/', ['controller' => 'Pages', 'action' => 'cakePdfDownload']);
+});
+
+Router::prefix('api', function ($routes) {
+    $routes->extensions(['json', 'xml']);
+    $routes->resources('Cities');
+    $routes->resources('Users');
+    Router::connect('Api/Cities',['controller' => 'Api/Cities', 'action' => 'index', 'prefix' => 'Api']);
+    Router::connect('api/user/register',['controller' => 'Users', 'action' => 'add', 'prefix' => 'api']);
+    $routes->fallbacks('InflectedRoute');
+});
+
 Router::scope('/', function (RouteBuilder $routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
@@ -55,6 +69,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'redirections', 'action' => 'index']);
+    $routes->connect('/cities/', ['controller' => 'Cities', 'action' => 'index']);
+    
     $routes->connect('/login/', ['controller' => 'Users', 'action' => 'login']);
     $routes->connect('/logout/', ['controller' => 'Users', 'action' => 'logout']);
     

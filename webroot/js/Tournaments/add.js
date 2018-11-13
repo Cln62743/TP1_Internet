@@ -17,8 +17,6 @@ $(document).ready(function () {
                     });
                 }
             });
-        } else {
-            $('#school-id').html('<option value="">Select a city first</option>');
         }
     });
 });

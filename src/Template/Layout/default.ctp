@@ -29,8 +29,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?php
         echo $this->Html->css([
             'base.css',
+            //'basic.css',
             'style.css',
-            'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'
+            'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css',
+            //'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'
         ]);
     ?>
 
@@ -39,7 +41,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?php
         echo $this->Html->script([
             'https://code.jquery.com/jquery-1.12.4.js',
-            'https://code.jquery.com/ui/1.12.1/jquery-ui.js'
+            'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
+            //'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
                 ], ['block' => 'scriptLibraries']
         );
     ?>
@@ -61,7 +64,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false])?></li>
                 <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false])?></li>
                 <li><?= $this->Html->link('Español', ['action' => 'changeLang', 'es'], ['escape' => false])?></li>
-                <li><?= $this->Html->link(('Page À propos'), ['controller' => 'Redirections', 'action' => 'aPropos'])?></li>
+                <li><?= $this->Html->link(_('Page À propos'), ['controller' => 'Redirections', 'action' => 'aPropos'])?></li>
+                <li><?= $this->Html->link(_('Api'), ['controller' => 'Api/Cities', 'action' => 'index'])?></li>
+                <li><?= $this->Html->link(_('Pdf'), ['controller' => 'Pages', 'action' => 'cakePdfDownload', $this->request->here])?></li>
                 <!--<li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>-->
                 <!--<li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>-->
             </ul>
@@ -78,5 +83,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </div>
     <footer>
     </footer>
+    <?= $this->fetch('scriptLibraries') ?>
+    <?= $this->fetch('script'); ?>
+    <?= $this->fetch('scriptBottom') ?>   
 </body>
 </html>
