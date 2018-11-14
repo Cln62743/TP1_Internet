@@ -2,13 +2,14 @@
 
 namespace App\Controller\Api;
 
+use App\Controller\Api\AppController;
 use Cake\Event\Event;
 use Cake\Network\Exception\UnauthorizedException;
 use Cake\Utility\Security;
 use Firebase\JWT\JWT;
 
 class UsersController extends AppController {
-
+    
     public function initialize() {
         parent::initialize();
         $this->Auth->allow(['add', 'token']);
@@ -30,7 +31,7 @@ class UsersController extends AppController {
         });
         return $this->Crud->execute();
     }
-
+    
     public function token() {
         $user = $this->Auth->identify();
         if (!$user) {
@@ -46,6 +47,5 @@ class UsersController extends AppController {
             ],
             '_serialize' => ['success', 'data']
         ]);
-    }
-
+    }    
 }

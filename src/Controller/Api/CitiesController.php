@@ -1,22 +1,15 @@
 <?php
 
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 namespace App\Controller\Api;
 
 use App\Controller\Api\AppController;
 
 class CitiesController extends AppController {
-
-    /*public function initialize() {
-        parent::initialize();
-        
-    }*/
-    
-    public function index()
-    {
-        $cities = $this->paginate($this->Cities);
-        $this->set(compact('cities'));
-    }
-    
     public $paginate = [
         'page' => 1,
         'limit' => 100,
@@ -28,5 +21,6 @@ class CitiesController extends AppController {
             'id', 'name'
         ]
     ];
-    
 }
+    
+    

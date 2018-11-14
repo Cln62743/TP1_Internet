@@ -29,9 +29,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?php
         echo $this->Html->css([
             'base.css',
-            'style.css',
             'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
-            'Cocktails/basic.css',
             'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'
         ]);
         ?>
@@ -50,7 +48,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
+        <ul class="title-area columns">
             <li class="name">
                 <h1><a href=""><?= $this->fetch('title') ?></a></h1>
             </li>
@@ -65,8 +63,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     ]);
                     ?>
                 </li>
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
             </ul>
         </div>
     </nav>

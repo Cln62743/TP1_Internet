@@ -199,6 +199,8 @@ Type::build('timestamp')
 //Inflector::rules('transliteration', ['/å/' => 'aa']);
 
 Plugin::load('CakePdf', ['bootstrap' => true]);
+
+
 Configure::write('CakePdf', [
     'engine' => [
         'className' => 'CakePdf.WkHtmlToPdf',

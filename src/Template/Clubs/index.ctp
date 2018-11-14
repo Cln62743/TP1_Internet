@@ -30,7 +30,7 @@
                     ]);
                 }
                 ?></td>
-                <td><?= h($club->clubName) ?></td>
+                <td><?= h($club->club_name) ?></td>
                 <td><?= h($club->created) ?></td>
                 <td><?= h($club->modified) ?></td>
                 <td class="actions">

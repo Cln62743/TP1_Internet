@@ -1,46 +1,64 @@
 <?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\City[]|\Cake\Collection\CollectionInterface $cities
- */
+$urlToRestApi = $this->Url->build('/api/cities', true);
+echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['block' => true]);
+echo $this->Html->script('Cities/index', ['block' => 'scriptBottom']);
 ?>
-<div class="cities index large-9 medium-8 columns content">
-    <h3><?= __('Cities') ?></h3>
-    <?= $this->Html->link(__('Add a city'), ['controller' => 'Cities', 'action' => 'add',], array('class' => 'button')) ?>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($cities as $city): ?>
-            <tr>
-                <td><?= $this->Number->format($city->id) ?></td>
-                <td><?= h($city->name) ?></td>
-                <td><?= h($city->created) ?></td>
-                <td><?= h($city->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $city->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $city->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $city->id], ['confirm' => __('Are you sure you want to delete # {0}?', $city->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default cities-content">
+            <div class="panel-heading">Cities <a href="javascript:void(0);" class="glyphicon glyphicon-plus" id="addLink" onclick="javascript:$('#addForm').slideToggle();">Add</a></div>
+            <div class="panel-body none formData" id="addForm">
+                <h2 id="actionLabel">Add City</h2>
+                <form class="form" id="cityAddForm" enctype='application/json'>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name" id="name"/>
+                    </div>
+                    <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#addForm').slideUp();">Cancel</a>
+                    <a href="javascript:void(0);" class="btn btn-success" onclick="cityAction('add')">Add City</a>
+                </form>
+            </div>
+            <div class="panel-body none formData" id="editForm">
+                <h2 id="actionLabel">Edit City</h2>
+                <form class="form" id="cityEditForm" enctype='application/json'>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name" id="nameEdit"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="id" id="idEdit"/>
+                    <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#editForm').slideUp();">Cancel</a>
+                    <a href="javascript:void(0);" class="btn btn-success" onclick="cityAction('edit')">Update City</a>
+                </form>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cityData">
+                    <?php
+                    $count = 0;
+                    foreach ($cities as $city): $count++;
+                        ?>
+                        <tr>
+                            <td><?php echo '#' . $count; ?></td>
+                            <td><?php echo $city['name']; ?></td>
+                            <td>
+                                <a href="javascript:void(0);" class="glyphicon glyphicon-edit" onclick="editCity('<?php echo $city['id']; ?>')"></a>
+                                <a href="javascript:void(0);" class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure to delete data?') ? cityAction('delete', '<?php echo $city['id']; ?>') : false;"></a>
+                            </td>
+                        </tr>
+                        <?php
+                    endforeach;
+                    ?>
+                    <tr><td colspan="5">No city(s) found......</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+

@@ -23,7 +23,7 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
-//Router::extensions(['json', 'xml']);
+Router::extensions(['json', 'xml', 'pdf']);
 
 /**
  * The default class to use for all routes
@@ -57,8 +57,11 @@ Router::prefix('api', function ($routes) {
     $routes->extensions(['json', 'xml']);
     $routes->resources('Cities');
     $routes->resources('Users');
-    Router::connect('Api/Cities',['controller' => 'Api/Cities', 'action' => 'index', 'prefix' => 'Api']);
-    Router::connect('api/user/register',['controller' => 'Users', 'action' => 'add', 'prefix' => 'api']);
+    Router::connect('/api/users/register',['controller' => 'Users', 'add', 'prefix' => 'api']);
+    $routes->fallbacks('InflectedRoute');
+});
+
+Router::prefix('admin', function ($routes) {
     $routes->fallbacks('InflectedRoute');
 });
 

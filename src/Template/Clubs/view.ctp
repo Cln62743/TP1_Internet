@@ -6,7 +6,7 @@
 ?>
 
 <div class="clubs view large-9 medium-8 columns content">
-    <h3><?= h($club->clubName) ?></h3>
+    <h3><?= h($club->club_name) ?></h3>
     <table class="vertical-table">
         <tr>
        
@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Name of the club') ?></th>
-            <td><?= h($club->clubName) ?></td>
+            <td><?= h($club->club_name) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Number of members') ?></th>

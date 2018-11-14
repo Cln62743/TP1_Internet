@@ -1,0 +1,18 @@
+2018-11-13 15:39:22 Notice: Deprecated (16384): RouteBuilder::extensions() is deprecated. Use RouteBuilder::setExtensions()/getExtensions() instead. - C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\config\routes.php, line: 57
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\functions.php, line 310]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+deprecationWarning - CORE\src\Core\functions.php, line 310
+Cake\Routing\RouteBuilder::extensions() - CORE\src\Routing\RouteBuilder.php, line 202
+Cake\Http\BaseApplication::{closure}() - ROOT\config\routes.php, line 57
+Cake\Routing\RouteBuilder::scope() - CORE\src\Routing\RouteBuilder.php, line 1010
+Cake\Routing\Router::scope() - CORE\src\Routing\Router.php, line 1046
+Cake\Routing\Router::prefix() - CORE\src\Routing\Router.php, line 1088
+require - ROOT\config\routes.php, line 63
+Cake\Http\BaseApplication::routes() - CORE\src\Http\BaseApplication.php, line 179
+Cake\Console\CommandRunner::loadRoutes() - CORE\src\Console\CommandRunner.php, line 377
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 150
+[main] - ROOT\bin\cake.php, line 12
+
+
+

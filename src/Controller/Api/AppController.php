@@ -45,5 +45,4 @@ class AppController extends Controller {
             'checkAuthIn' => 'Controller.initialize'
         ]);
 */    }
-
 }

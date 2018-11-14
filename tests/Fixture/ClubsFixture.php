@@ -18,14 +18,14 @@ class ClubsFixture extends TestFixture
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-        'clubName' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'club_name' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'created' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'icon' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'icon_dir' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'name' => ['type' => 'unique', 'columns' => ['clubName'], 'length' => []],
+            'name' => ['type' => 'unique', 'columns' => ['club_name'], 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -44,7 +44,7 @@ class ClubsFixture extends TestFixture
         $this->records = [
             [
                 'id' => 1,
-                'clubName' => 'Lorem ipsum dolor sit amet',
+                'club_name' => 'Lorem ipsum dolor sit amet',
                 'created' => '2018-11-10',
                 'modified' => '2018-11-10',
                 'icon' => 'Lorem ipsum dolor sit amet',
