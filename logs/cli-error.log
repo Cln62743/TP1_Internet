@@ -146,3 +146,63 @@ Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
 
 
 
+2018-11-18 19:19:46 Error: [Cake\Core\Exception\Exception] Unable to insert fixtures for "App\Test\TestCase\Controller\CitiesControllerTest" test case. SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 356
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(98): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#1 phar://C:/bin/phpunit.phar/phpunit/Framework/TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#2 phar://C:/bin/phpunit.phar/phpunit/Framework/TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#3 phar://C:/bin/phpunit.phar/phpunit/Framework/TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#4 phar://C:/bin/phpunit.phar/phpunit/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#5 phar://C:/bin/phpunit.phar/phpunit/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#6 phar://C:/bin/phpunit.phar/phpunit/TextUI/TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 phar://C:/bin/phpunit.phar/phpunit/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#8 phar://C:/bin/phpunit.phar/phpunit/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#9 C:\bin\phpunit.phar(570): PHPUnit\TextUI\Command::main()
+#10 {main}
+
+
+2018-11-18 19:23:07 Error: [Cake\Core\Exception\Exception] Unable to insert fixtures for "App\Test\TestCase\Controller\CitiesControllerTest" test case. SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 356
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(98): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#1 phar://C:/bin/phpunit.phar/phpunit/Framework/TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#2 phar://C:/bin/phpunit.phar/phpunit/Framework/TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#3 phar://C:/bin/phpunit.phar/phpunit/Framework/TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#4 phar://C:/bin/phpunit.phar/phpunit/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#5 phar://C:/bin/phpunit.phar/phpunit/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#6 phar://C:/bin/phpunit.phar/phpunit/TextUI/TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 phar://C:/bin/phpunit.phar/phpunit/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#8 phar://C:/bin/phpunit.phar/phpunit/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#9 C:\bin\phpunit.phar(570): PHPUnit\TextUI\Command::main()
+#10 {main}
+
+
+2018-11-18 19:23:22 Error: [Cake\Core\Exception\Exception] Unable to insert fixtures for "App\Test\TestCase\Controller\CitiesControllerTest" test case. SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 356
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(98): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#1 phar://C:/bin/phpunit.phar/phpunit/Framework/TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#2 phar://C:/bin/phpunit.phar/phpunit/Framework/TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#3 phar://C:/bin/phpunit.phar/phpunit/Framework/TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#4 phar://C:/bin/phpunit.phar/phpunit/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#5 phar://C:/bin/phpunit.phar/phpunit/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#6 phar://C:/bin/phpunit.phar/phpunit/TextUI/TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 phar://C:/bin/phpunit.phar/phpunit/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#8 phar://C:/bin/phpunit.phar/phpunit/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#9 C:\bin\phpunit.phar(570): PHPUnit\TextUI\Command::main()
+#10 {main}
+
+
+2018-11-18 19:28:11 Error: [Cake\Core\Exception\Exception] Unable to insert fixtures for "App\Test\TestCase\Controller\CitiesControllerTest" test case. SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 356
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(98): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#1 phar://C:/bin/phpunit.phar/phpunit/Framework/TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#2 phar://C:/bin/phpunit.phar/phpunit/Framework/TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#3 phar://C:/bin/phpunit.phar/phpunit/Framework/TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\CitiesControllerTest))
+#4 phar://C:/bin/phpunit.phar/phpunit/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#5 phar://C:/bin/phpunit.phar/phpunit/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#6 phar://C:/bin/phpunit.phar/phpunit/TextUI/TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 phar://C:/bin/phpunit.phar/phpunit/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#8 phar://C:/bin/phpunit.phar/phpunit/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#9 C:\bin\phpunit.phar(570): PHPUnit\TextUI\Command::main()
+#10 {main}
+
+
