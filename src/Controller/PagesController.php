@@ -15,6 +15,7 @@
 namespace App\Controller;
 
 use Cake\Core\Configure;
+use Cake\Event\Event;
 use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
@@ -71,11 +72,14 @@ class PagesController extends AppController
         }
     }
     
-    public function cakePdfDownload($name = null)
+    public function cakePdfDownload()
     {
-        Configure::write('CakePdf.download', true);
-        Configure::write('CakePdf.filename', $name.".pdf");
-        
-        return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+        $this->viewBuilder()->options([
+            'pdfConfig' => [
+            'download' => true, // This can be omitted if "filename" is specified.
+            'filename' => 'pdfEssai' // This can be omitted if you want file name based on URL.
+            ]
+        ]);
+        return $this->redirect("http://localhost/Appli_Session_5/ChessTournament_V1/tournaments/view/1.pdf");
     }
 }

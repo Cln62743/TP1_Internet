@@ -65,7 +65,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false])?></li>
                 <li><?= $this->Html->link('Español', ['action' => 'changeLang', 'es'], ['escape' => false])?></li>
                 <li><?= $this->Html->link(_('Page À propos'), ['controller' => 'Redirections', 'action' => 'aPropos'])?></li>
-                <li><?= $this->Html->link(_('Pdf'), ['controller' => 'Pages', 'action' => 'cakePdfDownload', $this->request->here])?></li>
+                <li><?= $this->Html->link(_('Pdf'), ['controller' => 'Tournaments', 'action' => 'view', 1])?></li>
                 <!--<li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>-->
                 <!--<li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>-->
             </ul>

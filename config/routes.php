@@ -48,10 +48,20 @@ Router::extensions(['json', 'xml', 'pdf']);
  */
 Router::defaultRouteClass(DashedRoute::class);
 
-Router::scope('/pdf_download/:id', function (RouteBuilder $routes) {
-    $routes->addExtensions(['pdf']);
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'cakePdfDownload']);
-});
+Cake\Core\Configure::write('CakePdf',[
+    'engine' =>[
+        'className'=>'Cakepdf.WkHtmlToPdf',
+        'binary'=>'C:\wkhtmltopdf\bin\wkhtmltopdf.exe'
+    ],
+    'margin' => [
+        'bottom' => 15,
+        'left' => 30,
+        'right' => 30,
+        'top' => 30
+    ],
+    'orientation' => 'portrait',
+    'download' => 'true'
+]);
 
 Router::prefix('api', function ($routes) {
     $routes->extensions(['json', 'xml']);

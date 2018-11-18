@@ -80,7 +80,7 @@ class TournamentsController extends AppController
      * @return \Cake\Http\Response|void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    /*public function view($id = null)
     {
         $tournament = $this->Tournaments->get($id, [
             'contain' => [
@@ -88,19 +88,9 @@ class TournamentsController extends AppController
                 ]
         ]);
         
-//        $players_id = AppController::array_on_key($tournament['player_tournament_participations'], 'player_id');
-        
-//        $players = array();
-//        if($players_id){
-//            $players = $usersTable
-//                ->find()
-//                ->where(['player_id IN' => $players_id])
-//                ->toList();
-//        }
-        
         $user = $this->Auth->user();
         $this->set(compact('tournament', 'players', 'user'));
-    }
+    }*/
     
     /**
      * Add method
@@ -197,4 +187,22 @@ class TournamentsController extends AppController
         }        
         return $this->redirect(['controller' => 'tournaments', 'action' => 'view', $id]);
     }
+    
+    public function view($id=null)
+        {    
+            $tournament = $this->Tournaments->get($id, [
+                'contain' => [
+                    'Players' => ['Users']
+                    ]
+            ]);
+
+            $user = $this->Auth->user();         
+            $this->viewBuilder()->options([
+                'pdfConfig' => [
+                    'orientation' => 'portrait',
+                    'filename' => 'Essai_' . $id
+                ]
+            ]);
+            return $this->redirect('/tournaments/view/1.pdf');
+        }
 }

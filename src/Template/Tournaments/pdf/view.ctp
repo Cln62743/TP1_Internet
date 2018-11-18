@@ -18,19 +18,72 @@
     <?= $this->Html->css('home.css', ['fullBase' => true]) ?>
     <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
 </head>
-<body class="home">
 
-<header class="row">
-    <div class="header-image"><?= $this->Html->image('cake.logo.svg') ?></div>
-    <div class="header-title">
-        <h1>Welcome to CakePHP <?= Configure::version() ?> Red Velvet. Build fast. Grow solid.</h1>
-    </div>
-</header>
-<div class="row">
-    <div class="columns large-12">
-        <?= $this->fetch('content') ?>
-    </div>
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Tournament $tournament
+ * Fichier : src/Template/Tournaments/view.ctp
+ */
+?>
+
+<h1><?= h($tournament->title) ?></h1>
+<p><?= h($tournament->body) ?></p>
+
+<!-- Affichage des objets TODO modifier pour que les valeurs concorde avec le projet -->
+<div class="Tournaments view columns content">
+    <h3><?= h($tournament->name) ?></h3>
+    <?php if($user['role'] === 'player'){ ?>
+    <li>
+        <?= $this->Html->link(__('Subscribe to the tournament'),['controller' => 'playerTournamentParticipations', 'action' => 'subscribe', $tournament->id]) ?>
+    </li>
+    <?php } ?>
+    <table class="vertical-table">
+        <tr>
+            <th scope="row"><?= __('Start date') ?></th>
+            <td><?= h($tournament->start_date) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('End date') ?></th>
+            <td><?= h($tournament->end_date) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('City') ?></th>
+            <td><?= h($tournament->city_id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('School') ?></th>
+            <td><?= h($tournament->school_id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Created') ?></th>
+            <td><?= h($tournament->created) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Modified') ?></th>
+            <td><?= h($tournament->modified) ?></td>
+        </tr>
+    </table>
 </div>
-</body>
 
-</html>
+<div class="Players view content">
+    <h3><?= __('Participating players') ?></h3>
+    <table cellpadding="0" cellspacing="0">
+        <head>
+            <tr>
+                <th scope="col"><?= $this->Paginator->sort(__('First Name')) ?></th>
+                <th scope="col"><?= $this->Paginator->sort(__('Last Name')) ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+        </head>
+        <tbody>
+            <?php foreach ($tournament->players as $player): ?>
+                <tr>
+                    <td><?= h($player->user->first_name) ?></td>
+                    <td><?= h($player->user->last_name) ?></td>
+                    <td><?= $this->Html->link(__('View user details'), ['controller' => 'users', 'action' => 'view', $player->user->id]) ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

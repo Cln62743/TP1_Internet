@@ -3,15 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/config/routes.php</file>
-            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/webroot/js/Cities/index.js</file>
-            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/src/Template/Layout/default.ctp</file>
-            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/src/Controller/SchoolsController.php</file>
-            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/src/Controller/TournamentsController.php</file>
-            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/webroot/js/Tournaments/add.js</file>
-            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/src/Template/Cities/index.ctp</file>
-            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/src/Template/Tournaments/add.ctp</file>
-            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/src/Template/Layout/monopage.ctp</file>
+            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/src/Template/Clubs/edit.ctp</file>
+            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/src/Template/Clubs/view.ctp</file>
+            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/src/Template/Clubs/index.ctp</file>
+            <file>file:/C:/Program%20Files%20(x86)/Ampps/www/Appli_Session_5/ChessTournament_V1/src/Template/Clubs/add.ctp</file>
         </group>
     </open-files>
 </project-private>
