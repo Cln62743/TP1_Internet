@@ -6,15 +6,14 @@
 ?>
 <?php
 $this->extend('/Layout/TwitterBootstrap/dashboard');
-
 $this->start('tb_actions');
 ?>
-    <li><?= $this->Html->link(__('New City'), ['action' => 'add']) ?></li>
-<?php
-$this->end();
+    
+<?php $this->end(); ?>
 
 <div class="cities index content">
     <h3><?= __('Cities') ?></h3>
+    <?= $this->Html->link(__('New City'), ['action' => 'add'], array('class' => 'button')) ?>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -29,13 +28,13 @@ $this->end();
             <?php foreach ($cities as $city): ?>
             <tr>
                 <td><?= $this->Number->format($city->id) ?></td>
-                td><?= h($city->name) ?></td>
+                <td><?= h($city->name) ?></td>
                 <td><?= h($city->created) ?></td>
                 <td><?= h($city->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link('', ['action' => 'view', $city->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                    <?= $this->Html->link('', ['action' => 'edit', $city->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                    <?= $this->Form->postLink('', ['action' => 'delete', $city->id], ['confirm' => __('Are you sure you want to delete # {0}?', $city->id)], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-thrash']) ?>
+                    <?= $this->Html->link('', ['action' => 'edit', $city->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+                    <?= $this->Form->postLink('', ['action' => 'delete', $city->id], ['confirm' => __('Are you sure you want to delete # {0}?', $city->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

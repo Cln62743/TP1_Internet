@@ -26,7 +26,7 @@ $this->end();
 
 <?= $this->Form->create($city) ?>
 <fieldset>
-<legend><?= __('Add {0}', ['City']) ?></legend>
+<legend><?= __('Edit {0}', ['City']) ?></legend>
     <?php
         echo $this->Form->control('name');
     ?>

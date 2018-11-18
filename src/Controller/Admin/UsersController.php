@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller\Api;
+namespace App\Controller\Admin;
 
-use App\Controller\Api\AppController;
+use App\Controller\Admin\AppController;
 use Cake\Event\Event;
 use Cake\Network\Exception\UnauthorizedException;
 use Cake\Utility\Security;

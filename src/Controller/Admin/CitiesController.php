@@ -5,26 +5,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace App\Controller\Api;
+namespace App\Controller\Admin;
 
-use App\Controller\Api\AppController;
+use App\Controller\Admin\AppController;
 
 class CitiesController extends AppController {
 public $paginate = [
         'page' => 1,
         'limit' => 100,
         'maxLimit' => 150,
-/*        'fields' => [
-            'id', 'name', 'description'
-        ],
-*/      'sortWhitelist' => [
+//        'fields' => [
+//        'id', 'name', 'description'
+//        ],
+        'sortWhitelist' => [
             'id', 'name'
         ]
     ];
     
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['index' ,'add', 'edit', 'view', 'delete']);
+        $this->viewBuilder()->layout('admin');
     }
 
     /**
@@ -35,7 +35,7 @@ public $paginate = [
     public function index()
     {
         $cities = $this->paginate($this->Cities);
-
+        
         $this->set(compact('cities'));
         $this->set('_serialize', ['cities']);
     }
