@@ -10,7 +10,7 @@
 
 
 <div ng-app="app">
-    <!--<div ng-controller="UsersController">
+    <!--<div ng-controller="UsersCtrl">
         <div id="login">
             <h3>Login</h3>
             <table>
@@ -32,15 +32,15 @@
         <a id="logout" ng-click="logout()">Logout</a>
     </div>-->
 
-    <div ng-controller="CitiesController">
+    <div ng-controller="CitiesCtrl">
         <div id="Add-Modif">
-            <table>
+            <table class="table">
                 <tr>
                     <td width="100">City name</td>
                     <td><input type="text" name="name" ng-model="city.name"/></td>
                 </tr>
             </table>
-            <a ng-click="addCity(city.name)">Add the city</a>
+            <a ng-click="addCity(city.name)" class="">Add the city</a>
             <br/>
             <a ng-click="editCity(city.name)">Save the modification</a>         
         </div>
@@ -48,7 +48,7 @@
         <p style="color: green">{{message}}</p>
         <p style="color: red">{{errorMessage}}</p>
 
-        <table>
+        <table class="table">
             <tr>
                 <th>City name</th>
             </tr>
