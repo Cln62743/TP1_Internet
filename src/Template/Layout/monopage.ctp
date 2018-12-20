@@ -17,7 +17,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <!DOCTYPE html>
 <html>
     <head>
-        <?= $this->element('head') ?>
+        <?php 
+            echo $this->element('head');
+        ?>
     </head>
     <body>
         <?= $this->element('header') ?>

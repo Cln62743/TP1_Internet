@@ -27,7 +27,7 @@ app.controller('CitiesCtrl', ['$scope', 'CityService', function ($scope, CitySer
         $scope.errorMessage = "";
 
         if($scope.city != null){
-            CityService.addCity($scope.city.name).then(
+            CityService.addCity($scope.city.addName).then(
                 function success(response){
                     $scope.getAllCities();
                     $scope.message = 'The city has been successfully added';
@@ -82,6 +82,7 @@ app.controller('CitiesCtrl', ['$scope', 'CityService', function ($scope, CitySer
             function success(response){
                 $scope.city = response.data.data;
                 $scope.city.id = id;
+                //$scope.message = response.data.name;
             },
 
             function error(response){

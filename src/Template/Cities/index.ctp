@@ -33,14 +33,28 @@
     </div>-->
 
     <div ng-controller="CitiesCtrl">
-        <div id="Add-Modif">
+        <div id="Add">
+            <table class="table">
+                <tr>
+                    <td width="100">City name</td>
+                    <td><input type="text" name="addName" ng-model="city.addName"/></td>
+                </tr>
+            </table>
+            <p><?= $this->element('Dropzone/dropzoneAdd') ?></p>
+            <br/>
+            <br/>
+            <a ng-click="addCity(city.addName)" class="">Add the city</a>
+        </div>
+        <div id="Edit">
             <table class="table">
                 <tr>
                     <td width="100">City name</td>
                     <td><input type="text" name="name" ng-model="city.name"/></td>
                 </tr>
             </table>
-            <a ng-click="addCity(city.name)" class="">Add the city</a>
+
+            <!-- Add the Dropzone/dropzoneEdit elements -->
+            <br/>
             <br/>
             <a ng-click="editCity(city.name)">Save the modification</a>         
         </div>
