@@ -16,3 +16,30 @@ Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 150
 
 
 
+2018-12-16 16:21:46 Notice: Notice (8): Undefined offset: 0 in [C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\tmp\bake\Bake-Element-create-tables-ctp.php, line 8]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - ROOT\tmp\bake\Bake-Element-create-tables-ctp.php, line 8
+Bake\View\BakeView::_evaluate() - ROOT\vendor\cakephp\bake\src\View\BakeView.php, line 214
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT\vendor\wyrihaximus\twig-view\src\View\TwigView.php, line 166
+Cake\View\View::_renderElement() - CORE\src\View\View.php, line 1598
+Cake\View\View::element() - CORE\src\View\View.php, line 706
+include - ROOT\tmp\bake\Bake-config-snapshot-ctp.php, line 37
+Bake\View\BakeView::_evaluate() - ROOT\vendor\cakephp\bake\src\View\BakeView.php, line 214
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT\vendor\wyrihaximus\twig-view\src\View\TwigView.php, line 166
+Bake\View\BakeView::render() - ROOT\vendor\cakephp\bake\src\View\BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT\vendor\cakephp\bake\src\Shell\Task\BakeTemplateTask.php, line 91
+Bake\Shell\Task\SimpleBakeTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php, line 105
+Migrations\Shell\Task\SimpleMigrationTask::bake() - ROOT\vendor\cakephp\migrations\src\Shell\Task\SimpleMigrationTask.php, line 95
+Migrations\Shell\Task\MigrationSnapshotTask::bake() - ROOT\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php, line 48
+Bake\Shell\Task\SimpleBakeTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php, line 91
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 532
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 525
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 342
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
+[main] - ROOT\bin\cake.php, line 12
+
+
+

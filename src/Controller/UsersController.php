@@ -13,16 +13,11 @@ use Cake\Mailer\Email;
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class UsersController extends AppController
-{    
-    public function initialize()
-    {
-        parent::initialize();
-    }
-    
+{        
     public function beforeFilter(Event $event){
         parent::beforeFilter($event);
+
         $user = $this->Auth->user();
-        
         if ($user) {
            switch ($user['role']) {
             case 'player':
@@ -36,6 +31,25 @@ class UsersController extends AppController
             $this->Auth->allow(['login', 'logout', 'addPlayer']);
         }
     }
+
+    public function login()
+    {  
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+die();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error(__('Invalid username or password, try again.'));
+        }
+    }
+    
+    public function logout()
+    {
+        $this->Flash->success(_('You have been disconnected.'));
+        return $this->redirect($this->Auth->logout());
+    }
     
     // after successful login this method is called
     public function redirectAccordingToRole()
@@ -43,9 +57,9 @@ class UsersController extends AppController
         $user = $this->Auth->user();
         switch ($user['role']) {
             case 'player':
-                return $this->redirect(['controller' => 'users', 'action' => 'view', $user['id']]);
+                return $this->redirect(['action' => 'view', $user['id']]);
             case 'admin':
-                return $this->redirect(['controller' => 'users', 'action' => 'index']);
+                return $this->redirect(['action' => 'index']);
         }
     }
 
@@ -58,7 +72,6 @@ class UsersController extends AppController
     {
         $users = $this->paginate($this->Users); 
         $this->set(compact('users'));
-        $this->set('_serialize', ['users']);
     }
 
     /**
@@ -78,24 +91,6 @@ class UsersController extends AppController
             return $this->redirect(['controller' => 'players', 'action' => 'view', $id]);
         }
         $this->set(compact('user'));
-    }
-    
-    public function login()
-    {
-        if ($this->request->is('post')) {
-            $user = $this->Auth->identify();
-            if ($user) {
-                $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl());
-            }
-            $this->Flash->error(__('Invalid username or password, try again'));
-        }
-    }
-    
-    public function logout()
-    {
-        $this->Flash->success(_('Vous avez été déconnecté.'));
-        return $this->redirect($this->Auth->logout());
     }
 
     /**

@@ -206,3 +206,269 @@ Stack Trace:
 #10 {main}
 
 
+2018-12-16 16:29:59 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chess_tournaments.i18ns' doesn't exist in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2018-12-16 16:30:11 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chess_tournaments.i18ns' doesn't exist in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2018-12-16 16:30:21 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chess_tournaments.i18ns' doesn't exist in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2018-12-16 16:30:25 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chess_tournaments.i18ns' doesn't exist in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2018-12-16 16:30:27 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chess_tournaments.i18ns' doesn't exist in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2018-12-16 16:30:30 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chess_tournaments.i18ns' doesn't exist in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2018-12-16 16:30:35 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chess_tournaments.i18ns' doesn't exist in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('I18n')
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('I18n')
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('I18n')
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2018-12-16 16:35:07 Error: [InvalidArgumentException] There was a problem connecting to the database: SQLSTATE[HY000] [14] unable to open database file in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\SQLiteAdapter.php on line 84
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(134): Phinx\Db\Adapter\SQLiteAdapter->connect()
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(461): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(74): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\Migrate.php(67): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Command\Command.php(251): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(886): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#16 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#17 {main}
+
+
+2018-12-16 16:35:23 Error: [InvalidArgumentException] There was a problem connecting to the database: SQLSTATE[HY000] [14] unable to open database file in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\SQLiteAdapter.php on line 84
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(134): Phinx\Db\Adapter\SQLiteAdapter->connect()
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(461): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(74): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\Migrate.php(67): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Command\Command.php(251): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(886): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#16 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#17 {main}
+
+
+2018-12-16 16:35:25 Error: [InvalidArgumentException] There was a problem connecting to the database: SQLSTATE[HY000] [14] unable to open database file in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\SQLiteAdapter.php on line 84
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(134): Phinx\Db\Adapter\SQLiteAdapter->connect()
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(461): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(74): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\Migrate.php(67): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Command\Command.php(251): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(886): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#16 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#17 {main}
+
+
+2018-12-17 17:03:16 Error: [InvalidArgumentException] There was a problem connecting to the database: SQLSTATE[HY000] [14] unable to open database file in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\SQLiteAdapter.php on line 84
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(134): Phinx\Db\Adapter\SQLiteAdapter->connect()
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(461): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(74): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\Migrate.php(67): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Command\Command.php(251): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(886): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#16 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#17 {main}
+
+
+2018-12-17 17:08:25 Error: [PDOException] SQLSTATE[HY000]: General error: 1 table "players" has more than one primary key in C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 165
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(165): PDO->exec('CREATE TABLE `p...')
+#1 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\SQLiteAdapter.php(244): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `p...')
+#2 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(349): Phinx\Db\Adapter\SQLiteAdapter->createTable(Object(Phinx\Db\Table\Table), Array, Array)
+#3 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\TimedOutputAdapter.php(138): Phinx\Db\Adapter\AdapterWrapper->createTable(Object(Phinx\Db\Table\Table), Array, Array)
+#4 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(349): Phinx\Db\Adapter\TimedOutputAdapter->createTable(Object(Phinx\Db\Table\Table), Array, Array)
+#5 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(136): Phinx\Db\Adapter\AdapterWrapper->createTable(Object(Phinx\Db\Table\Table), Array, Array)
+#6 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(661): Phinx\Db\Plan\Plan->execute(Object(Migrations\CakeAdapter))
+#7 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(555): Phinx\Db\Table->executeActions(false)
+#8 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Table.php(91): Phinx\Db\Table->create()
+#9 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\config\Migrations\20181216162146_BDInitiale.php(138): Migrations\Table->create()
+#10 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(128): BDInitiale->up()
+#11 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(387): Phinx\Migration\Manager\Environment->executeMigration(Object(BDInitiale), 'up', false)
+#12 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(361): Phinx\Migration\Manager->executeMigration('default', Object(BDInitiale), 'up', false)
+#13 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(121): Phinx\Migration\Manager->migrate('default', '20181216162146', false)
+#14 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Command\Migrate.php(67): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Command\Command.php(251): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(886): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#22 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#23 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#24 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#25 C:\Program Files (x86)\Ampps\www\Appli_Session_5\ChessTournament_V1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#26 {main}
+
+

@@ -14,9 +14,20 @@ class CitiesController extends AppController
 {
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow();
         // Set the layout.
-        $this->viewBuilder()->layout('monopage');
+        $this->viewBuilder()->setLayout('monopage');
+    }
+
+    public function getCities() {
+        $this->autoRender = false; // avoid to render view
+
+        $cities = $this->Cities->find('all', [
+            'contain' => ['Schools'],
+        ]);
+
+        $citiesJ = json_encode($cities);
+        $this->response->type('json');
+        $this->response->body($citiesJ);
     }
     
     /**
@@ -76,11 +87,11 @@ class CitiesController extends AppController
      */
     public function edit($id = null)
     {
-        $city = $this->Cities->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
+        $city = $this->Cities->findById($id)->contain('Schools')->firstOrFail();
+
+        if ($this->request->is(['post', 'put'])) {
             $city = $this->Cities->patchEntity($city, $this->request->getData());
+            
             if ($this->Cities->save($city)) {
                 $this->Flash->success(__('The city has been saved.'));
 
@@ -88,6 +99,7 @@ class CitiesController extends AppController
             }
             $this->Flash->error(__('The city could not be saved. Please, try again.'));
         }
+        
         $this->set(compact('city'));
     }
 

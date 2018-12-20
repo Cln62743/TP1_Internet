@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-use Cake\Event\Event;
+
 /**
  * Schools Controller
  *
@@ -12,11 +12,13 @@ use Cake\Event\Event;
  */
 class SchoolsController extends AppController
 {
-    
-    public function beforeFilter(Event $event)
-    {
-        parent::beforeFilter($event);      
-        $this->Auth->allow(['getByCity']);
+    public function getByCity(){
+        $city_id = $this->request->query('city_id');
+
+        $schools = $this->Schools->find('all', [
+            'conditions' => ['Schools.city_id' => $city_id],
+        ]);
+        $this->set('schools', $schools);
     }
 
     /**
@@ -32,16 +34,6 @@ class SchoolsController extends AppController
         $schools = $this->paginate($this->Schools);
 
         $this->set(compact('schools'));
-    }
-    
-    public function getByCity() {
-        $city_id = $this->request->query('city_id');
-
-        $schools = $this->Schools->find('all', [
-            'conditions' => ['Schools.city_id' => $city_id],
-        ]);
-        $this->set('schools', $schools);
-        $this->set('_serialize', ['schools']);
     }
 
     /**
@@ -71,14 +63,14 @@ class SchoolsController extends AppController
         if ($this->request->is('post')) {
             $school = $this->Schools->patchEntity($school, $this->request->getData());
             if ($this->Schools->save($school)) {
-                $this->Flash->success(__('The school has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                $response = ['result' => 'The school has been saved.'];
+            }else{
+                $response = ['result' => 'The school could not be saved. Please, try again.'];
             }
-            $this->Flash->error(__('The school could not be saved. Please, try again.'));
+            
         }
-        $cities = $this->Schools->Cities->find('list', ['limit' => 200]);
-        $this->set(compact('school', 'cities'));
+
+        $this->set(compact('response'));
     }
 
     /**
@@ -90,20 +82,24 @@ class SchoolsController extends AppController
      */
     public function edit($id = null)
     {
+        $data = $this->request->input('json_decode');
+
+        $id = $data->id;
         $school = $this->Schools->get($id, [
             'contain' => []
         ]);
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $school = $this->Schools->patchEntity($school, $this->request->getData());
             if ($this->Schools->save($school)) {
-                $this->Flash->success(__('The school has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                $response = ['result' => 'The school was update.'];
+            }else{
+                $response = ['result' => 'The school could not be saved. Please, try again.'];
             }
-            $this->Flash->error(__('The school could not be saved. Please, try again.'));
+            
         }
-        $cities = $this->Schools->Cities->find('list', ['limit' => 200]);
-        $this->set(compact('school', 'cities'));
+
+        $this->set(compact('response'));
     }
 
     /**
@@ -115,14 +111,18 @@ class SchoolsController extends AppController
      */
     public function delete($id = null)
     {
+        $data = $this->request->input('json_decode');
+
+        $id = $data->id;
         $this->request->allowMethod(['post', 'delete']);
         $school = $this->Schools->get($id);
         if ($this->Schools->delete($school)) {
-            $this->Flash->success(__('The school has been deleted.'));
-        } else {
-            $this->Flash->error(__('The school could not be deleted. Please, try again.'));
+                $response = ['result' => 'The school has been deleted.'];
+            }else{
+                $response = ['result' => 'The school could not be deleted. Please, try again.'];
+            } 
         }
 
-        return $this->redirect(['action' => 'index']);
+        $this->set(compact('response'));
     }
 }

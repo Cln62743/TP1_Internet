@@ -9,12 +9,12 @@
 
 <h1><?= __('Login') ?></h1>
 
-<?= $this->Form->create() ?>
-<?= $this->Form->control(('email')) ?>
-<?= $this->Form->control(('password')) ?>
-<p>
-    <?= $this->Form->button(__('Login')) ?>        
-    <?= $this->Html->link(__('Create a account'), ['controller' => 'users', 'action' => 'addPlayer',], array('class' => 'button')) ?>
-</p>
+<? $this->Form->create() ?>
+	<?= $this->Form->control(__('email')) ?>
+	<?= $this->Form->control(__('password')) ?>
+	<p>
+	    <?= $this->Form->button(__('Login')) ?>        
+	    <?= $this->Html->link(__('Create a account'), ['controller' => 'users', 'action' => 'addPlayer',], array('class' => 'button')) ?>
+	</p>
 <?= $this->Form->end() ?>
 

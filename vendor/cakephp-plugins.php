@@ -7,6 +7,7 @@ return [
         'Crud' => $baseDir . '/vendor/friendsofcake/crud/',
         'DebugKit' => $baseDir . '/vendor/cakephp/debug_kit/',
         'Migrations' => $baseDir . '/vendor/cakephp/migrations/',
-        'WyriHaximus/TwigView' => $baseDir . '/vendor/wyrihaximus/twig-view/'
+        'WyriHaximus/TwigView' => $baseDir . '/vendor/wyrihaximus/twig-view/',
+        'crud' => $baseDir . '/plugins/crud/'
     ]
 ];

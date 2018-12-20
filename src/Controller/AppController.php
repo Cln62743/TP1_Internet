@@ -16,7 +16,6 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
-use Cake\I18n\I18n;
 
 /**
  * Application Controller
@@ -38,15 +37,14 @@ class AppController extends Controller
      *
      * @return void
      */
-    public function initialize()
-    {
+    public function initialize() {
         parent::initialize();
-        I18n::setLocale($this->request->getSession()->read('Config.language'));
-        $this->loadComponent('RequestHandler', [
-            'enableBeforeRedirect' => false,
-        ]);
+
+        $this->viewBuilder()->layout('default');
+
+        $this->loadComponent('RequestHandler', ['enableBeforeRedirect' => false]);
         $this->loadComponent('Flash');
-        
+
         $this->loadComponent('Auth', [
             'authenticate' => [
                 'Form' => [
@@ -57,65 +55,48 @@ class AppController extends Controller
                 ]
             ],
             'loginAction' => [
-                'controller' => 'users',
+                'controller' => 'Users',
                 'action' => 'login'
             ],
-            'loginRedirect' => [
-                'controller' => 'redirections',
-                'action' => 'index'
-            ],
-            'logoutRedirect' => [
-                'controller' => 'users',
-                'action' => 'login'
-            ],
-            
-            
             
             'authorize' => ['Controller'],
-             // Si pas autorisé, on renvoit sur la page précédente     
             'unauthorizedRedirect' => $this->referer()
         ]);
-
-        // Permet à l'action "display" de notre PagesController de continuer
-        // à fonctionner. Autorise également les actions "read-only".
-        $this->Auth->allow(['changeLang']);
+        /*
+         * Enable the following components for recommended CakePHP security settings.
+         * see https://book.cakephp.org/3.0/en/controllers/components/security.html
+         */
+        //$this->loadComponent('Security');
+        //$this->loadComponent('Csrf');
     }
 
-    /*
-     * Enable the following component for recommended CakePHP security settings.
-     * see https://book.cakephp.org/3.0/en/controllers/components/security.html
+    /**
+     * Before render callback.
+     *
+     * @param \Cake\Event\Event $event The beforeRender event.
+     * @return \Cake\Http\Response|null|void
      */
-    //$this->loadComponent('Security');
-    
-    public function isAuthorized($user)
-    {
+    public function beforeRender(Event $event) {
+        // Note: These defaults are just to get started quickly with development
+        // and should not be used in production. You should instead set "_serialize"
+        // in each action as required.
+        if (!array_key_exists('_serialize', $this->viewVars) &&
+                in_array($this->response->type(), ['application/json', 'application/xml'])
+        ) {
+            $this->set('_serialize', true);
+        }
+    }
+
+    public function beforeFilter(Event $event) {
+        $this->Auth->allow(['index', 'view', 'display', 'getByCity', 'getSchoolsSortedByCities', 'getCities']);
+    }
+
+    public function isAuthorized($user) {
+        // Admin can access every action
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
+        // Default deny
         return false;
-    }
-    
-    public function beforeFilter(Event $event){
-        $user = $this->Auth->user();
-        $this->set('connectedUser', $user);
-    }
-    
-    // Customs function
-     public function changeLang($lang = null){        
-        I18n::setLocale($lang);
-        $this->request->getSession()->write('Config.language', $lang);
-        return $this->redirect($this->request->referer());
-    }
-    
-    public static function array_on_key($array, $key)
-    {
-        if($array) {
-            foreach ($array as $value) {
-                $result[] = $value[$key];
-            }
-        } else {
-            $result = array();
-        }
-        return $result;
     }
 }

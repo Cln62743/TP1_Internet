@@ -42,12 +42,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         echo $this->Html->script([
             'https://code.jquery.com/jquery-1.12.4.js',
             'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
+            'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js'
             //'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
                 ], ['block' => 'scriptLibraries']
         );
     ?>
 </head>
 <body>
+    <?php
+        $connectedUser = $this->request->session()->read('Auth.User');
+    ?>
     <nav class="top-bar expanded" data-topbar role="navigation">
         
         <ul class="title-area large-3 medium-4 columns">
@@ -61,6 +65,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <li><?= $this->Html->link(($connectedUser['email']), ['controller' => 'Users', 'action' => 'view', $connectedUser['id']])?></li>
                     <li><?= $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout'])?></li>
                 <?php } ?>
+                <li><?= $this->Html->link('Monopage', ['controller' => 'Api/Cities', 'action' => 'index'], ['escape' => false])?></li>
                 <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false])?></li>
                 <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false])?></li>
                 <li><?= $this->Html->link('Español', ['action' => 'changeLang', 'es'], ['escape' => false])?></li>

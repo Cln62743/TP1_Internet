@@ -17,8 +17,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <!DOCTYPE html>
 <html>
     <head>
-    <head>
         <?= $this->Html->charset() ?>
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             <?= $cakeDescription ?>:
@@ -29,6 +29,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?php
         echo $this->Html->css([
             'base.css',
+            'style.css',
             'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
             'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'
         ]);
@@ -36,44 +37,45 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
         <?= $this->fetch('meta') ?>
         <?= $this->fetch('css') ?>
+        
         <?php
         echo $this->Html->script([
             'https://code.jquery.com/jquery-1.12.4.js',
             'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
+            'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js',
             'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
                 ], ['block' => 'scriptLibraries']
         );
         ?>
     </head>
-</head>
-<body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><?=
-                    $this->Html->link('Section Admin en PHP', [
-                        'prefix' => 'admin',
-                        'controller' => 'Cities',
-                        'action' => 'index'
-                    ]);
-                    ?>
+    <body>
+        <nav class="top-bar expanded" data-topbar role="navigation">
+            <ul class="title-area columns">
+                <li class="name">
+                    <h1><a href=""><?= $this->fetch('title') ?></a></h1>
                 </li>
             </ul>
+            <div class="top-bar-section">
+                <ul class="right">
+                    <li><?=
+                        $this->Html->link('Section Admin en PHP', [
+                            'prefix' => 'admin',
+                            'controller' => 'Cities',
+                            'action' => 'index'
+                        ]);
+                        ?>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <?= $this->Flash->render() ?>
+        <div class="container clearfix">
+            <?= $this->fetch('content') ?>
         </div>
-    </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
-    </div>
-    <footer>
-    </footer>
-    <?= $this->fetch('scriptLibraries') ?>
-    <?= $this->fetch('script'); ?>
-    <?= $this->fetch('scriptBottom') ?> 
-</body>
+        <footer>
+        </footer>
+        <?= $this->fetch('scriptLibraries') ?>
+        <?= $this->fetch('script'); ?>
+        <?= $this->fetch('scriptBottom') ?> 
+    </body>
 </html>

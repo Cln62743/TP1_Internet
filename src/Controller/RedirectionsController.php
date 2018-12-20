@@ -27,7 +27,7 @@ class RedirectionsController extends AppController
                 break;
             }
         } else {
-            $this->Auth->allow(['index']);
+            $this->Auth->allow(['index', 'aPropos']);
         }    
     }
 

@@ -67,7 +67,7 @@ Router::prefix('api', function ($routes) {
     $routes->extensions(['json', 'xml']);
     $routes->resources('Cities');
     $routes->resources('Users');
-    Router::connect('/api/users/register',['controller' => 'Users', 'add', 'prefix' => 'api']);
+    Router::connect('/api/users/register',['controller' => 'Users', 'action' => 'add', 'prefix' => 'api']);
     $routes->fallbacks('InflectedRoute');
 });
 
@@ -82,7 +82,6 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'redirections', 'action' => 'index']);
-    $routes->connect('/cities/', ['controller' => 'Cities', 'action' => 'index']);
     
     $routes->connect('/login/', ['controller' => 'Users', 'action' => 'login']);
     $routes->connect('/logout/', ['controller' => 'Users', 'action' => 'logout']);

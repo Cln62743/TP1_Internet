@@ -1,64 +1,67 @@
 <?php
-$urlToRestApi = $this->Url->build('/api/cities', true);
-echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['block' => true]);
-echo $this->Html->script('Cities/index', ['block' => 'scriptBottom']);
+    $urlToRestApi = $this->Url->build('/api/cities', true);
+
+    echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['block' => true]);
+    echo $this->Html->script('Cities/index', ['block' => 'scriptBottom']);
+
+    echo $this->Html->script('https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit');
 ?>
 
-<div class="container">
-    <div class="row">
-        <div class="panel panel-default cities-content">
-            <div class="panel-heading">Cities <a href="javascript:void(0);" class="glyphicon glyphicon-plus" id="addLink" onclick="javascript:$('#addForm').slideToggle();">Add</a></div>
-            <div class="panel-body none formData" id="addForm">
-                <h2 id="actionLabel">Add City</h2>
-                <form class="form" id="cityAddForm" enctype='application/json'>
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" name="name" id="name"/>
-                    </div>
-                    <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#addForm').slideUp();">Cancel</a>
-                    <a href="javascript:void(0);" class="btn btn-success" onclick="cityAction('add')">Add City</a>
-                </form>
-            </div>
-            <div class="panel-body none formData" id="editForm">
-                <h2 id="actionLabel">Edit City</h2>
-                <form class="form" id="cityEditForm" enctype='application/json'>
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" name="name" id="nameEdit"/>
-                    </div>
-                    <input type="hidden" class="form-control" name="id" id="idEdit"/>
-                    <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#editForm').slideUp();">Cancel</a>
-                    <a href="javascript:void(0);" class="btn btn-success" onclick="cityAction('edit')">Update City</a>
-                </form>
-            </div>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="cityData">
-                    <?php
-                    $count = 0;
-                    foreach ($cities as $city): $count++;
-                        ?>
-                        <tr>
-                            <td><?php echo '#' . $count; ?></td>
-                            <td><?php echo $city['name']; ?></td>
-                            <td>
-                                <a href="javascript:void(0);" class="glyphicon glyphicon-edit" onclick="editCity('<?php echo $city['id']; ?>')"></a>
-                                <a href="javascript:void(0);" class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure to delete data?') ? cityAction('delete', '<?php echo $city['id']; ?>') : false;"></a>
-                            </td>
-                        </tr>
-                        <?php
-                    endforeach;
-                    ?>
-                    <tr><td colspan="5">No city(s) found......</td></tr>
-                </tbody>
+
+
+<div ng-app="app">
+    <!--<div ng-controller="UsersController">
+        <div id="login">
+            <h3>Login</h3>
+            <table>
+                <tr>
+                    <td width="100">Email</td>
+                    <td><input type="text" name="email", ng-model="email"/></td>
+                </tr>
+                <tr>
+                    <td width="100">Password</td>
+                    <td><input type="password" name="password", ng-model="password"/></td>
+                </tr>
             </table>
+
+            <div id="capcha"></div>
+            <p style="color:red;">{{ captcha_status }}</p>
+            <a ng-click="login()">Login</a>
+        <br/>
         </div>
+        <a id="logout" ng-click="logout()">Logout</a>
+    </div>-->
+
+    <div ng-controller="CitiesController">
+        <div id="Add-Modif">
+            <table>
+                <tr>
+                    <td width="100">City name</td>
+                    <td><input type="text" name="name" ng-model="city.name"/></td>
+                </tr>
+            </table>
+            <a ng-click="addCity(city.name)">Add the city</a>
+            <br/>
+            <a ng-click="editCity(city.name)">Save the modification</a>         
+        </div>
+
+        <p style="color: green">{{message}}</p>
+        <p style="color: red">{{errorMessage}}</p>
+
+        <table>
+            <tr>
+                <th>City name</th>
+            </tr>
+            <tr ng-repeat="city in cities">
+                <td>{{city.name}}</td>
+                <div>
+                    <td>
+                        <a id="edit" ng-click="getCity(city.id)">Edit</a>
+                        <br/>
+                        <a id="delete" ng-click="deleteCity(city.id)">Delete</a>
+                    </td> 
+                </div>
+            </tr>
+        </table>
     </div>
 </div>
-
