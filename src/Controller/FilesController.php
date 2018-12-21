@@ -4,32 +4,18 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 /**
- * Cities Controller
+ * Files Controller
  *
- * @property \App\Model\Table\CitiesTable $Cities
+ * @property \App\Model\Table\FilesTable $Files
  *
- * @method \App\Model\Entity\City[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
+ * @method \App\Model\Entity\File[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class CitiesController extends AppController
+class FilesController extends AppController
 {
     public function initialize() {
         parent::initialize();
-        // Set the layout.
-        $this->viewBuilder()->setLayout('monopage');
     }
 
-    public function getCities() {
-        $this->autoRender = false; // avoid to render view
-
-        $cities = $this->Cities->find('all', [
-            'contain' => ['Schools'],
-        ]);
-
-        $citiesJ = json_encode($cities);
-        $this->response->type('json');
-        $this->response->body($citiesJ);
-    }
-    
     /**
      * Index method
      *
@@ -37,25 +23,23 @@ class CitiesController extends AppController
      */
     public function index()
     {
-        $cities = $this->paginate($this->Cities);
+        $files = $this->paginate($this->Files);
 
-        $this->set(compact('cities'));
+        $this->set(compact('files'));
     }
 
     /**
      * View method
      *
-     * @param string|null $id City id.
+     * @param string|null $id File id.
      * @return \Cake\Http\Response|void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null)
     {
-        $city = $this->Cities->get($id, [
-            'contain' => ['Schools', 'Tournaments']
-        ]);
+        $file = $this->Files->get($id);
 
-        $this->set('city', $city);
+        $this->set('file', $file);
     }
 
     /**
@@ -65,59 +49,74 @@ class CitiesController extends AppController
      */
     public function add()
     {
-        $city = $this->Cities->newEntity(); 
-        if ($this->request->is('post')) {
-            $city = $this->Cities->patchEntity($city, $this->request->getData());
-            if ($this->Cities->save($city)) {
-                $this->Flash->success(__('The city has been saved.'));
+        $file = $this->Files->newEntity(); 
+        if ($this->request->is('post') or $this->request->is('ajax')) {
+            if (!empty($this->request->data['file']['name'])) {
+                $fileName = $this->request->data['file']['name'];
+                $uploadPath = 'Files/';
+                $uploadFile = $uploadPath . $fileName;
 
-                return $this->redirect(['action' => 'index']);
+                if(move_uploaded_file($this->request->data['file']['tmp_name'], 'img/' . $uploadFile)){
+                    $file->name = $fileName;
+                    $file->path = $uploadPath;
+
+                    if($this->Files->save($file)){
+                        $this->Flash->success(__('The file has been successfuly loaded.'));
+                    }else{
+                        $this->Flash->error(__('The file could not be load.'));
+                    }
+                }else{
+                    $this->Flash->error(__('The file could not be saved.'));
+                }
+            }else{
+                $this->Flash->error(__('You must choose a file.'));
             }
-            $this->Flash->error(__('The city could not be saved. Please, try again.'));
         }
-        $this->set(compact('city'));
+        $this->set(compact('file'));
     }
 
     /**
      * Edit method
      *
-     * @param string|null $id City id.
+     * @param string|null $id File id.
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null)
     {
-        $city = $this->Cities->findById($id)->contain('Schools')->firstOrFail();
+        $file = $this->Files->get($id, [
+            'contain' => []
+        ]);
 
-        if ($this->request->is(['post', 'put'])) {
-            $city = $this->Cities->patchEntity($city, $this->request->getData());
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $file = $this->Files->patchEntity($file, $this->request->getData());
             
-            if ($this->Cities->save($city)) {
-                $this->Flash->success(__('The city has been saved.'));
+            if ($this->Files->save($file)) {
+                $this->Flash->success(__('The file has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The city could not be saved. Please, try again.'));
+            $this->Flash->error(__('The file could not be saved. Please, try again.'));
         }
         
-        $this->set(compact('city'));
+        $this->set(compact('file'));
     }
 
     /**
      * Delete method
      *
-     * @param string|null $id City id.
+     * @param string|null $id File id.
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $city = $this->Cities->get($id);
-        if ($this->Cities->delete($city)) {
-            $this->Flash->success(__('The city has been deleted.'));
+        $file = $this->Files->get($id);
+        if ($this->Files->delete($file)) {
+            $this->Flash->success(__('The file has been deleted.'));
         } else {
-            $this->Flash->error(__('The city could not be deleted. Please, try again.'));
+            $this->Flash->error(__('The file could not be deleted. Please, try again.'));
         }
 
         return $this->redirect(['action' => 'index']);

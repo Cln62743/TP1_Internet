@@ -64,6 +64,29 @@ class BDInitiale extends AbstractMigration
             )
             ->create();
 
+        $this->table('files')
+            ->addColumn('name', 'string', [
+                'default' => null,
+                'limit' => 255,
+                'null' => false,
+            ])
+            ->addColumn('path', 'string', [
+                'default' => null,
+                'limit' => 255,
+                'null' => false,
+            ])
+            ->addColumn('created', 'datetime', [
+                'default' => null,
+                'limit' => null,
+                'null' => false,
+            ])
+            ->addColumn('modified', 'datetime', [
+                'default' => null,
+                'limit' => null,
+                'null' => false,
+            ])
+            ->created();
+
         $this->table('player_tournament_participations', ['id' => false, 'primary_key' => ['player_id', 'tournament_id']])
             ->addColumn('player_id', 'integer', [
                 'default' => null,
@@ -369,6 +392,7 @@ class BDInitiale extends AbstractMigration
 
         $this->table('cities')->drop()->save();
         $this->table('clubs')->drop()->save();
+        $this->table('files')->drop()->save();
         $this->table('player_tournament_participations')->drop()->save();
         $this->table('players')->drop()->save();
         $this->table('schools')->drop()->save();

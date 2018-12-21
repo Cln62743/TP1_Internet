@@ -65,7 +65,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <li><?= $this->Html->link(($connectedUser['email']), ['controller' => 'Users', 'action' => 'view', $connectedUser['id']])?></li>
                     <li><?= $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout'])?></li>
                 <?php } ?>
-                <li><?= $this->Html->link('Monopage', ['controller' => 'Api/Cities', 'action' => 'index'], ['escape' => false])?></li>
+                <li><?= $this->Html->link('Monopage', ['controller' => 'Cities', 'action' => 'index'], ['escape' => false])?></li>
                 <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false])?></li>
                 <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false])?></li>
                 <li><?= $this->Html->link('Español', ['action' => 'changeLang', 'es'], ['escape' => false])?></li>

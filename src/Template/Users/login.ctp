@@ -17,4 +17,5 @@
 	    <?= $this->Html->link(__('Create a account'), ['controller' => 'users', 'action' => 'addPlayer',], array('class' => 'button')) ?>
 	</p>
 <?= $this->Form->end() ?>
+<h2>Login ne fonctionne pas passer par dessus en ecrivant dans le URL ChessTournament_V1/tournaments</h2>
 

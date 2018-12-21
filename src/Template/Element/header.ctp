@@ -1,8 +1,8 @@
-<!-- Navigation -->
 <?php
 
 ?>
 
+<!-- NavBar Api -->
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -18,22 +18,11 @@
             <ul class="nav navbar-nav">
                 <li>
                     <?= $this->Html->link(__('Tournaments'), ['controller' => 'Tournaments', 'action' => 'index']) ?>
-                </li>
-                <li>
-                    <?php
-                    $loguser = $this->request->session()->read('Auth.User');
-                    if ($loguser) {
-                        $user = $loguser['username'];
-                        echo $this->Html->link($user . ' logout', ['controller' => 'Users', 'action' => 'logout']);
-                    } else {
-                        echo $this->Html->link('login', ['controller' => 'Users', 'action' => 'login']);
-                    }
-                    ?>
                 </li> 
                 <li><?=
                     $this->Html->link('Listes dynamiques avec AngularJS (action Edit)', [
                         'controller' => 'Tournaments',
-                        'action' => 'index'
+                        'action' => 'add'
                     ]);
                     ?>
                 </li>
@@ -44,7 +33,13 @@
                     ]);
                     ?>
                 </li>
-
+                <li><?=
+                    $this->Html->link('Page À propos', [
+                        'controller' => 'Redirections',
+                        'action' => 'aPropos'
+                    ]);
+                    ?>
+                </li>
             </ul>
         </div>
     </div>

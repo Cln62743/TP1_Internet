@@ -12,6 +12,7 @@
         <li><?= $this->Html->link(__('View my player account'),['controller' => 'users', 'action' => 'redirectAccordingToRole']) ?></li>      
         <li><?= $this->Html->link(__('List Tournaments'),['controller' => 'tournaments', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Clubs'),['controller' => 'clubs', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Files'),['controller' => 'files', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 

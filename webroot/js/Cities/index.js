@@ -7,18 +7,25 @@ var onloadCallback = function() {
 
 var app = angular.module('app', []);
 
-/*
+
 app.controller('UsersCtrl', function($scope, $http){
 
     $scope.login = function(){
+        $scope.message = "";
+        $scope.errorMessage = "Not implemented";
 
+        if (grecaptcha.getResponse(widgetId1) == '') {
+            $scope.captcha_status = 'Please verify captha.';
+            return;
+        }
     }
 
     $scope.logout = function(){
-        
+        $scope.message = "";
+        $scope.errorMessage = "Not implemented";
     }
 });
-*/
+
 
 app.controller('CitiesCtrl', ['$scope', 'CityService', function ($scope, CityService) {
 
@@ -39,6 +46,7 @@ app.controller('CitiesCtrl', ['$scope', 'CityService', function ($scope, CitySer
         }else{
             $scope.errorMessage = 'Please enter valid information';
         }
+        $('#Add').hide();
     }
 
     $scope.editCity = function(){
@@ -55,6 +63,8 @@ app.controller('CitiesCtrl', ['$scope', 'CityService', function ($scope, CitySer
                 $scope.errorMessage = "A error occured while editing the city";
             }
         );
+        $('#Edit').hide();
+        $('#Add').show();
     }
 
     $scope.deleteCity = function(id){
@@ -82,7 +92,9 @@ app.controller('CitiesCtrl', ['$scope', 'CityService', function ($scope, CitySer
             function success(response){
                 $scope.city = response.data.data;
                 $scope.city.id = id;
-                //$scope.message = response.data.name;
+                
+                $('#Add').hide();
+                $('#Edit').show();
             },
 
             function error(response){
@@ -192,6 +204,8 @@ $(document).ready(function () {
     
     //$('#logout').hide();
     //$('#motpasse').hide();
-    $('#modififcationAjout').hide();
+    $('#Add').show();
+    $('#Edit').hide();
 
+    $('#logout').hide();
 });
